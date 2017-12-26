@@ -1,0 +1,124 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+
+<div id="bullet-calculator"></div>
+
+<script>
+  $(`
+ <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>User Input</h2>
+        <form id="dimension-form" action="" class="">
+          <div class="form-group row">
+            <label for="railing" class="col-8 col-form-label">Railing feet</label>
+            <div class="col-4">
+              <input id="railing" class="form-control" min="3" placeholder="Railing Feet" type="number">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="sections" class="col-8 col-form-label">Number of Sections</label>
+            <div class="col-4">
+              <input id="sections" class="form-control" placeholder="Number of Sections" type="number">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div id="display-totals" class="col-md-4">
+        <h2>Calculations</h2>
+        <label>Feet of Cable</label>
+        <div id="railing-calc">3</div>
+        <label>Minimum Amount of Kits Needed</label>
+        <div id="kits-calc">1</div>
+      </div>
+    </div>
+  </div>
+`).appendTo($('#bullet-calculator'));
+
+  $(document).ready(() => {
+
+    //inputs
+    const dimensionFormInputs = $('#dimension-form :input');
+    const sections = $('#sections');
+
+    //calculations
+    const railingCalc = $('#railing-calc');
+    const kitsCalc = $('#kits-calc');
+
+    //runs of cable per section
+    const runs = 9;
+    //max feet per section
+    const minFeet = 3.5;
+
+    //on input change
+    dimensionFormInputs.on('change', (event) => {
+      //id of input
+      const fieldId = event.target.id;
+      //value of input
+      const val = event.target.value;
+
+      //if the railing input is changing
+      if (fieldId === 'railing') {
+        //get total feet
+        let feet = feetOfCable(val);
+        //get minimum sections based on feet
+        let minSections = calcMinSections(feet);
+        //change railing calculations display
+        railingCalc.text(feet);
+        //change sections minimum display
+        sections.attr('min', minSections);
+        //change the value of the minimum section to minimum value
+        sections.val(minSections);
+        //trigger change to calculations display change
+        sections.trigger('change');
+      }
+
+      //if the sections field changes
+      if (fieldId === 'sections') {
+        //get number of kits needed based on number of sections
+        let kits = calcKitsBySections(val);
+        //change the number kits needed display
+        kitsCalc.text(kits);
+      }
+    });
+
+    //calculation the feet of cable needed
+    let feetOfCable = (val) => {
+      //take the value of total number of railing feet
+      let railingFeet = parseFloat(val);
+      //if its less than 0
+      if (railingFeet < 0) {
+        railingFeet = 0;
+      } else if (railingFeet < 3) {
+        railingFeet = 3;
+      }
+      //return railing feet x runs
+      return railingFeet * runs
+    };
+    //calculate kits based on sections
+    let calcKitsBySections = (sections) => {
+      //each run within a section needs one kit (two terminal ends)
+      return sections * runs;
+
+    };
+    //divides the total feet by the number of runs then rounded to the minimum number of sections based on the max distance apart
+    let calcMinSections = (feet) => {
+      return Math.ceil((feet / runs) / minFeet);
+    };
+
+
+    let calculateKits = (feet) => {
+      let minSections = Math.ceil((feet / runs) / 3.5);
+
+      console.log('Minimum sections', minSections);
+      console.log('runs', runs);
+
+      let totalKits = minSections * runs;
+
+      console.log('totalKits', totalKits);
+
+      return totalKits;
+    }
+
+  });
+</script>

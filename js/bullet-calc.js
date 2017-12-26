@@ -10,7 +10,36 @@
 //Cable Bullet Kit
 //  2 terminal ends
 //  1 kit for every run
-
+$(`
+ <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>User Input</h2>
+        <form id="dimension-form" action="" class="">
+          <div class="form-group row">
+            <label for="railing" class="col-8 col-form-label">Railing feet</label>
+            <div class="col-4">
+              <input id="railing" class="form-control" min="3" placeholder="Railing Feet" type="number">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="sections" class="col-8 col-form-label">Number of Sections</label>
+            <div class="col-4">
+              <input id="sections" class="form-control" placeholder="Number of Sections" type="number">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div id="display-totals" class="col-md-4">
+        <h2>Calculations</h2>
+        <label>Feet of Cable</label>
+        <div id="railing-calc">3</div>
+        <label>Minimum Amount of Kits Needed</label>
+        <div id="kits-calc">1</div>
+      </div>
+    </div>
+  </div>
+`).appendTo($('#bullet-calculator'));
 
 $(document).ready(() => {
 
