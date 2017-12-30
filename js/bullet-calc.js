@@ -43,6 +43,20 @@
 
 $(document).ready(() => {
 
+  const spoolIncrements = [{
+    feet: 500,
+    name: 'Large',
+    price: 250
+  }, {
+    feet: 250,
+    name: 'Medium',
+    price: 137.5
+  }, {
+    feet: 100,
+    name: 'Small',
+    price: 60
+  }];
+
   //inputs
   const dimensionFormInputs = $('#dimension-form :input');
   const sections = $('#sections');
@@ -52,6 +66,7 @@ $(document).ready(() => {
   const railingCalc = $('#railing-calc');
   const kitsCalc = $('#kits-calc');
   const runsCalc = $('#runs-calc');
+  const spools = $('#spools');
 
   //max feet per section
   const maxVertInches = 3;
@@ -88,6 +103,7 @@ $(document).ready(() => {
     calcKitsBySections(sections);
   }
 
+  //called when height field is modified
   function heightChange(val) {
     runs = Math.ceil((val - 3) / maxVertInches);
 
@@ -106,149 +122,87 @@ $(document).ready(() => {
 
   //get total feet based on runs * feet
   function calcFeetByRuns(feet) {
+    let totalFeet = feet * runs;
+    calculateSpools(totalFeet);
     //update dom
-    return railingCalc.text(feet * runs);
+    return railingCalc.text(totalFeet);
   }
-
-
-  // let spool = {
-  //   large: [250, 50],
-  //   medium: [137, 25],
-  //   small: [60, 10]
-  // };
-  //
-  // const data = [
-  //   {
-  //     name: 'lar',
-  //     weight: 250,
-  //     benefit: 50,
-  //     pieces: 100,
-  //   },
-  //   {
-  //
-  //     name: 'med',
-  //     price: 137,
-  //     feet: 25,
-  //     pieces: 100,
-  //   },
-  //   {
-  //     name: 'SM',
-  //     price: 60,
-  //     feet: 10,
-  //     pieces: 100,
-  //   },
-  // ];
-  //
-  //
-  // const spoolOptions = {
-  //   large:
-  //     {
-  //     price: 250,
-  //     feet: 50,
-  //   },
-  //   medium:
-  //     {
-  //       price: 137,
-  //       feet: 25,
-  //   },
-  //   small: {
-  //     price: 60,
-  //     feet: 10,
-  //   }
-  // };
-
-
-  let spoolArray = [50, 25, 10];
-
-  // let numberOfLargeSpools = 0;
-  // let numberOfMediumSpools = 0;
-  // let numberOfSmallSpools = 0;
-  //
-  // function findSpools(totalFeet) {
-  //
-  //
-  //   console.log('totalFeet to start', totalFeet)
-  //
-  //   if (totalFeet >= spoolOptions.large.feet) {
-  //     console.log('is larger than large spool footage');
-  //     console.log('totalFeet / spoolOptions.large.feet', totalFeet / spoolOptions.large.feet);
-  //     numberOfLargeSpools = Math.abs(totalFeet / spoolOptions.large.feet);
-  //     console.log('numberOfLargeSpools', numberOfLargeSpools)
-  //     totalFeet =- (numberOfLargeSpools * spoolOptions.large.feet)
-  //     console.log('totalFeet', totalFeet)
-  //   }
-  //
-  //   if (totalFeet >= spoolOptions.medium.feet) {
-  //     numberOfMediumSpools = Math.abs(totalFeet / spoolOptions.medium.feet);
-  //     totalFeet =- (numberOfMediumSpools * spoolOptions.medium.feet)
-  //     console.log('totalFeet', totalFeet)
-  //   }
-  //
-  //   if(totalFeet >= spoolOptions.small.feet) {
-  //     numberOfSmallSpools = Math.abs(totalFeet / spoolOptions.small.feet);
-  //     totalFeet =- (numberOfSmallSpools * spoolOptions.small.feet)
-  //     console.log('totalFeet', totalFeet)
-  //   }
-  //
-  //   if (totalFeet > 0) {
-  //     numberOfSmallSpools = numberOfSmallSpools+ 1;
-  //     totalFeet =- (numberOfSmallSpools * spoolOptions.small.feet);
-  //     console.log('totalFeet', totalFeet)
-  //   }
-  //
-  //
-  // }
-  //
-  // findSpools(60);
-  //
-  // console.log('numberOfLargeSpools', numberOfLargeSpools)
-  // console.log('numberOfMediumSpools', numberOfMediumSpools)
-  // console.log('numberOfSmallSpools', numberOfSmallSpools)
-
-  let spoolIncrements = [{
-    feet: 500,
-    name: 'Large',
-    price: 250
-  }, {
-    feet: 250,
-    name: 'Medium',
-    price: 137.5
-  }, {
-    feet: 100,
-    name: 'Small',
-    price: 60
-  }];
-
 
 
   function calculateSpools(feet) {
+    //find all valid combinations
     let options = findAllCombos(feet, spoolIncrements, 0, []);
-
+    //return the cheapest spool and add some meta data calculations
     let cheapestSpoolCombo = addTotalsFindCheapest(options);
-
     console.log('cheapestSpoolCombo', cheapestSpoolCombo);
+    //parse the data into an object ot deal with it
+    // let parsedObject = convertToObject(cheapestSpoolCombo);
+
+    //type of spool
+    //amount of spool
+    //cost per spool
+    //cost per type of spool
+    //total cost for spools
+
+    //empty parent element where we will append data to
+    spools.empty();
+
+    //iterate through types of spool and append data according ot amount
+    Object.getOwnPropertyNames(cheapestSpoolCombo.types)
+      .forEach((propName) => {
+        if (cheapestSpoolCombo.types[propName].amount > 0) {
+          $(`<p>${propName} x${cheapestSpoolCombo.types[propName].amount} = $${cheapestSpoolCombo.types[propName].totalCost} </p>`).appendTo(spools);
+        }
+      });
 
   }
 
 
-  //adds some meta data and returns the cheapest options
-  function addTotalsFindCheapest(array) {
-    let cheapestIndex = 0;
-    for (let i = 0; i < array.length; i++) {
-      let cost = 0;
-      let totalFeet = 0;
-      array[i].forEach((spool) => {
-        cost += spool.price;
-        totalFeet += spool.feet;
+
+  //creats an easy to work with object for each combination and returns the cheapest option
+  //allCombinations is an array of arrays
+  function addTotalsFindCheapest(allCombinations) {
+    //[{feet: 100, name: "Small", price: 60}]
+    //combo is an array of objects
+    let cheapestCombo = allCombinations.map((combo) => {
+      // console.log('combo', combo);
+      let comboObject = {
+        totalCost: 0,
+        totalFeet: 0,
+        types: {
+          large: {
+            amount: 0,
+            cost: 0,
+            totalCost: 0
+          },
+          medium: {
+            amount: 0,
+            cost: 0,
+            totalCost: 0
+          },
+          small: {
+            amount: 0,
+            cost: 0,
+            totalCost: 0
+          },
+        },
+        spools: []
+      };
+      //return raw spool data just in case we want to use it later
+      //runs meta data calculations based on data
+      comboObject.spools = combo.map((spool) => {
+        let name = spool.name.toLowerCase();
+        comboObject.totalCost += spool.price;
+        comboObject.totalFeet += spool.feet;
+        comboObject.types[name].amount++;
+        comboObject.types[name].cost = spool.price;
+        comboObject.types[name].totalCost += spool.price;
+        return spool;
       });
-      array[i].total = cost;
-      array[i].totalFeet = totalFeet;
-      array[i].ppf = Math.round(100*(array[i].total / array[i].totalFeet))/100;
-      if (array[i].total < array[cheapestIndex].total) {
-        cheapestIndex = i;
-      }
-    }
-    return array[cheapestIndex];
+      return comboObject;
+    }).reduce((acc, curr) => acc.totalCost < curr.totalCost ? acc : curr);
+
+    return cheapestCombo;
   }
 
   //finds all combinations of spools that cover footage
@@ -278,7 +232,6 @@ $(document).ready(() => {
 
     return combos;
   }
-
 
 
 });
