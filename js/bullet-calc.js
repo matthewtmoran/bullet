@@ -10,36 +10,81 @@
 //Cable Bullet Kit
 //  2 terminal ends
 //  1 kit for every run
-// $(`
-//  <div class="container">
-//     <div class="row">
-//       <div class="col-md-4">
-//         <h2>User Input</h2>
-//         <form id="dimension-form" action="" class="">
-//           <div class="form-group row">
-//             <label for="railing" class="col-8 col-form-label">Railing feet</label>
-//             <div class="col-4">
-//               <input id="railing" class="form-control" min="3" placeholder="Railing Feet" type="number">
-//             </div>
-//           </div>
-//           <div class="form-group row">
-//             <label for="sections" class="col-8 col-form-label">Number of Sections</label>
-//             <div class="col-4">
-//               <input id="sections" class="form-control" placeholder="Number of Sections" type="number">
-//             </div>
-//           </div>
-//         </form>
-//       </div>
-//       <div id="display-totals" class="col-md-4">
-//         <h2>Calculations</h2>
-//         <label>Feet of Cable</label>
-//         <div id="railing-calc">3</div>
-//         <label>Minimum Amount of Kits Needed</label>
-//         <div id="kits-calc">1</div>
-//       </div>
-//     </div>
-//   </div>
-// `).appendTo($('#bullet-calculator'));
+$(`
+ <div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<h2>User Input</h2>
+			<form id="dimension-form" action="" class="">
+				<div class="form-group row">
+					<label for="railing" class="col-8 col-form-label">Railing feet</label>
+					<div class="col-4">
+						<input id="railing" class="form-control" min="3" placeholder="Railing Feet" type="number">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="height" class="col-8 col-form-label">Railing height in inches</label>
+					<div class="col-4">
+						<input id="height" class="form-control" min="" placeholder="(inches)" type="number">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="sections" class="col-8 col-form-label">Number of Sections</label>
+					<div class="col-4">
+						<input id="sections" class="form-control" placeholder="Number of Sections" type="number">
+					</div>
+				</div>
+			</form>
+		</div>
+		<div id="display-totals" class="col-md-4">
+			<h2>Calculations</h2>
+			<div class="form-group row">
+				<label class="col-8 col-form-label">Feet of Cable</label>
+				<div id="railing-calc" class="col-4" ></div>
+			</div>
+			<div class="form-group row">
+				<label class="col-8 col-form-label">Runs</label>
+				<div id="runs-calc" class="col-4"></div>
+			</div>
+			<div class="form-group row">
+				<label class="col-8 col-form-label">Bullet Kits</label>
+				<div id="kits-calc" class="col-4"></div>
+			</div>
+		</div>
+
+		<table class="table" id="price-table">
+			<thead>
+			<tr>
+				<th>Item</th>
+				<th>Quantity</th>
+				<th>Unit Price</th>
+				<th>Total Cost</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>Installation Kit</td>
+				<td>1</td>
+				<td>$150</td>
+				<td class="row-cost">$150</td>
+			</tr>
+			<tr class="last-static">
+				<td>Bullet Kits</td>
+				<td id="kit-quantity"></td>
+				<td>$21</td>
+				<td id="kit-cost" class="row-cost"></td>
+			</tr>
+			<tr id="total-row">
+				<td><b>Grand Total:</b></td>
+				<td></td>
+				<td></td>
+				<td id="grand-total"></td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+`).appendTo($('#bullet-calculator'));
 
 $(document).ready(() => {
 
@@ -59,8 +104,9 @@ $(document).ready(() => {
 
   //inputs
   const dimensionFormInputs = $('#dimension-form :input');
-  const sections = $('#sections');
+  const sectionsEl = $('#sections');
   const railing = $('#railing');
+  const heightEl = $('#height');
 
   //calculations
   const railingCalc = $('#railing-calc');
@@ -71,11 +117,42 @@ $(document).ready(() => {
   //max feet per section
   const maxVertInches = 3;
 
+
+  const kitQuan = $('#kit-quantity');
+  const priceTable = $('#price-table');
+  const totalRow = $('#total-row');
+  const kitCost = $('#kit-cost');
+  const grandTotal = $('#grand-total');
+
   //runs of cable per section
   let runs = 9;
+  let verticle = 30;
+  let sections = 1;
+
+  function init() {
+    railing.val(50);
+
+    railingChange(50);
+
+    heightEl.val(30);
+
+    heightChange(30);
+
+    sectionsEl.val(1);
+
+    sectionsChange(1);
+
+    // heightEl.trigger('change');
+    // railing.trigger('change');
+    // sectionsEl.trigger('change');
+
+
+  }
+  init();
 
   //on input change
   dimensionFormInputs.on('change', (event) => {
+    console.log('triggered');
     //id of input
     const fieldId = event.target.id;
     //value of input
@@ -108,7 +185,7 @@ $(document).ready(() => {
     runs = Math.ceil((val - 3) / maxVertInches);
 
     calcFeetByRuns(railing.val());
-    calcKitsBySections(sections.val());
+    calcKitsBySections(sectionsEl.val());
 
     return runsCalc.text(runs);
   }
@@ -117,6 +194,9 @@ $(document).ready(() => {
   //calculate kits based on sections
   function calcKitsBySections(sections) {
     // update dom
+    kitQuan.text(sections * runs);
+    kitCost.text('$'+21 * (sections * runs));
+    calculateGrandTotal();
     return kitsCalc.text(sections * runs);
   }
 
@@ -137,24 +217,36 @@ $(document).ready(() => {
     console.log('cheapestSpoolCombo', cheapestSpoolCombo);
     //parse the data into an object ot deal with it
     // let parsedObject = convertToObject(cheapestSpoolCombo);
-
-    //type of spool
-    //amount of spool
-    //cost per spool
-    //cost per type of spool
-    //total cost for spools
-
     //empty parent element where we will append data to
-    spools.empty();
+
+    //find all spool rows and remove them
+    $('.spool-row').remove();
 
     //iterate through types of spool and append data according ot amount
     Object.getOwnPropertyNames(cheapestSpoolCombo.types)
       .forEach((propName) => {
-        if (cheapestSpoolCombo.types[propName].amount > 0) {
-          $(`<p>${propName} x${cheapestSpoolCombo.types[propName].amount} = $${cheapestSpoolCombo.types[propName].totalCost} </p>`).appendTo(spools);
+        let spool = cheapestSpoolCombo.types[propName];
+        if (spool.amount > 0) {
+          $(`<tr class="spool-row">
+                <td>${propName} Spool</td>
+                <td>${spool.amount}x${spool.feet}'</td>
+                <td>$${spool.cost}</td>
+                <td class="row-cost">$${spool.totalCost}</td>
+            </tr>`).insertBefore(totalRow);
         }
       });
+    calculateGrandTotal()
+  }
 
+  function calculateGrandTotal() {
+    let total = 0;
+    $('.row-cost').each(function(e, v) {
+      let numStr = $(this).text().substr(1);
+      if (!!numStr) {
+        total += parseInt(numStr);
+      }
+    });
+    grandTotal.text(`$${total}`);
   }
 
 
@@ -173,16 +265,19 @@ $(document).ready(() => {
           large: {
             amount: 0,
             cost: 0,
+            feet: 0,
             totalCost: 0
           },
           medium: {
             amount: 0,
             cost: 0,
+            feet: 0,
             totalCost: 0
           },
           small: {
             amount: 0,
             cost: 0,
+            feet: 0,
             totalCost: 0
           },
         },
@@ -196,6 +291,7 @@ $(document).ready(() => {
         comboObject.totalFeet += spool.feet;
         comboObject.types[name].amount++;
         comboObject.types[name].cost = spool.price;
+        comboObject.types[name].feet = spool.feet;
         comboObject.types[name].totalCost += spool.price;
         return spool;
       });
