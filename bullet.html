@@ -1,6 +1,17 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 
+<style>
+	.card {
+	min-height: 242px; }
+
+	.spool-name {
+	text-transform: capitalize; }
+
+	#grand-total {
+	font-weight: bold; }
+</style>
+
 <div id="bullet-calculator"></div>
 
 <script>
@@ -19,71 +30,89 @@
   $(`
  <div class="container">
 	<div class="row">
-		<div class="col-md-4">
-			<h2>User Input</h2>
-			<form id="dimension-form" action="" class="">
-				<div class="form-group row">
-					<label for="railing" class="col-8 col-form-label">Railing feet</label>
-					<div class="col-4">
-						<input id="railing" class="form-control" min="3" placeholder="Railing Feet" type="number">
-					</div>
+		<div class="col-md-6 col-xs-12">
+			<div class="card">
+				<div class="card-block">
+					<h4 class="card-title">User Input</h4>
+					<form id="dimension-form" action="" class="">
+						<div class="form-group row">
+							<label for="railing" class="col-8 col-form-label">Linear Railing Feet</label>
+							<div class="col-4">
+								<input id="railing" class="form-control" min="3" placeholder="Railing Feet" type="number">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="height" class="col-8 col-form-label">Fill Area (railing height in inches)</label>
+							<div class="col-4">
+								<input id="height" class="form-control" min="" placeholder="(inches)" type="number">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="sections" class="col-8 col-form-label">Number of 'sections'</label>
+							<div class="col-4">
+								<input id="sections" class="form-control" placeholder="Number of Sections" type="number">
+							</div>
+						</div>
+					</form>
 				</div>
-				<div class="form-group row">
-					<label for="height" class="col-8 col-form-label">Railing height in inches</label>
-					<div class="col-4">
-						<input id="height" class="form-control" min="" placeholder="(inches)" type="number">
-					</div>
-				</div>
-				<div class="form-group row">
-					<label for="sections" class="col-8 col-form-label">Number of Sections</label>
-					<div class="col-4">
-						<input id="sections" class="form-control" placeholder="Number of Sections" type="number">
-					</div>
-				</div>
-			</form>
+			</div>
 		</div>
-		<div id="display-totals" class="col-md-4">
-			<h2>Calculations</h2>
-			<div class="form-group row">
-				<label class="col-8 col-form-label">Feet of Cable</label>
-				<div id="railing-calc" class="col-4" ></div>
-			</div>
-			<div class="form-group row">
-				<label class="col-8 col-form-label">Runs</label>
-				<div id="runs-calc" class="col-4"></div>
-			</div>
-			<div class="form-group row">
-				<label class="col-8 col-form-label">Bullet Kits</label>
-				<div id="kits-calc" class="col-4"></div>
+		<div id="display-totals" class="col-md-6 col-xs-12">
+			<div class="card">
+				<div class="card-block">
+					<h4 class="card-title">Calculations</h4>
+					<div class="form-group row">
+						<label class="col-8 col-form-label">Total Feet of Cable</label>
+						<div id="railing-calc" class="col-4" ></div>
+					</div>
+					<div class="form-group row">
+						<label class="col-8 col-form-label">Number Of Runs</label>
+						<div id="runs-calc" class="col-4"></div>
+					</div>
+					<div class="form-group row">
+						<label class="col-8 col-form-label">Bullet Kits</label>
+						<div id="kits-calc" class="col-4"></div>
+					</div>
+				</div>
 			</div>
 		</div>
 
-		<table class="table" id="price-table">
+	</div>
+	<div class="row">
+		<table class="table table-striped" id="price-table">
 			<thead>
 			<tr>
 				<th>Item</th>
 				<th>Quantity</th>
 				<th>Unit Price</th>
+				<th>Price Per Foot</th>
+				<th>Extra Spool</th>
 				<th>Total Cost</th>
 			</tr>
 			</thead>
-			<tbody>
+			<tbody >
 			<tr>
 				<td>Installation Kit</td>
 				<td>1</td>
 				<td>$150</td>
+				<td>-</td>
+				<td>-</td>
 				<td class="row-cost">$150</td>
 			</tr>
 			<tr class="last-static">
 				<td>Bullet Kits</td>
 				<td id="kit-quantity"></td>
 				<td>$21</td>
+				<td>-</td>
+				<td>-</td>
 				<td id="kit-cost" class="row-cost"></td>
 			</tr>
 			<tr id="total-row">
 				<td><b>Grand Total:</b></td>
 				<td></td>
 				<td></td>
+				<td id="ppf"></td>
+				<td id="overage"></td>
 				<td id="grand-total"></td>
 			</tr>
 			</tbody>
@@ -147,12 +176,6 @@
       sectionsEl.val(1);
 
       sectionsChange(1);
-
-      // heightEl.trigger('change');
-      // railing.trigger('change');
-      // sectionsEl.trigger('change');
-
-
     }
     init();
 
@@ -180,12 +203,10 @@
     function railingChange(val) {
       calcFeetByRuns(val)
     }
-
     //get number of kits needed based on number of sections
     function sectionsChange(sections) {
       calcKitsBySections(sections);
     }
-
     //called when height field is modified
     function heightChange(val) {
       runs = Math.ceil((val - 3) / maxVertInches);
@@ -205,13 +226,15 @@
       calculateGrandTotal();
       return kitsCalc.text(sections * runs);
     }
-
     //get total feet based on runs * feet
     function calcFeetByRuns(feet) {
-      let totalFeet = feet * runs;
+      let totalFeet = feetTimesRuns(feet);
       calculateSpools(totalFeet);
       //update dom
       return railingCalc.text(totalFeet);
+    }
+    function feetTimesRuns(feet) {
+      return feet * runs;
     }
 
 
@@ -220,7 +243,6 @@
       let options = findAllCombos(feet, spoolIncrements, 0, []);
       //return the cheapest spool and add some meta data calculations
       let cheapestSpoolCombo = addTotalsFindCheapest(options);
-      console.log('cheapestSpoolCombo', cheapestSpoolCombo);
       //parse the data into an object ot deal with it
       // let parsedObject = convertToObject(cheapestSpoolCombo);
       //empty parent element where we will append data to
@@ -234,13 +256,17 @@
           let spool = cheapestSpoolCombo.types[propName];
           if (spool.amount > 0) {
             $(`<tr class="spool-row">
-                <td>${propName} Spool</td>
+                <td class="spool-name">${propName} Spool</td>
                 <td>${spool.amount}x${spool.feet}'</td>
                 <td>$${spool.cost}</td>
+                <td>-</td>
+                <td>-</td>
                 <td class="row-cost">$${spool.totalCost}</td>
             </tr>`).insertBefore(totalRow);
           }
         });
+      $('#overage').text(cheapestSpoolCombo.overage + "'");
+      $('#ppf').text('$' + cheapestSpoolCombo.ppf);
       calculateGrandTotal()
     }
 
@@ -252,7 +278,7 @@
           total += parseInt(numStr);
         }
       });
-      grandTotal.text(`$${total}`);
+      grandTotal.text(` $${total}`);
     }
 
 
@@ -267,6 +293,8 @@
         let comboObject = {
           totalCost: 0,
           totalFeet: 0,
+          ppf: 0,
+          overage: 0,
           types: {
             large: {
               amount: 0,
@@ -301,6 +329,10 @@
           comboObject.types[name].totalCost += spool.price;
           return spool;
         });
+
+        comboObject.ppf = Math.round(100*(comboObject.totalCost / comboObject.totalFeet));
+
+        comboObject.overage = (comboObject.totalFeet - parseInt(feetTimesRuns(railing.val())));
         return comboObject;
       }).reduce((acc, curr) => acc.totalCost < curr.totalCost ? acc : curr);
 

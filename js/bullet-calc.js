@@ -10,81 +10,7 @@
 //Cable Bullet Kit
 //  2 terminal ends
 //  1 kit for every run
-$(`
- <div class="container">
-	<div class="row">
-		<div class="col-md-4">
-			<h2>User Input</h2>
-			<form id="dimension-form" action="" class="">
-				<div class="form-group row">
-					<label for="railing" class="col-8 col-form-label">Railing feet</label>
-					<div class="col-4">
-						<input id="railing" class="form-control" min="3" placeholder="Railing Feet" type="number">
-					</div>
-				</div>
-				<div class="form-group row">
-					<label for="height" class="col-8 col-form-label">Railing height in inches</label>
-					<div class="col-4">
-						<input id="height" class="form-control" min="" placeholder="(inches)" type="number">
-					</div>
-				</div>
-				<div class="form-group row">
-					<label for="sections" class="col-8 col-form-label">Number of Sections</label>
-					<div class="col-4">
-						<input id="sections" class="form-control" placeholder="Number of Sections" type="number">
-					</div>
-				</div>
-			</form>
-		</div>
-		<div id="display-totals" class="col-md-4">
-			<h2>Calculations</h2>
-			<div class="form-group row">
-				<label class="col-8 col-form-label">Feet of Cable</label>
-				<div id="railing-calc" class="col-4" ></div>
-			</div>
-			<div class="form-group row">
-				<label class="col-8 col-form-label">Runs</label>
-				<div id="runs-calc" class="col-4"></div>
-			</div>
-			<div class="form-group row">
-				<label class="col-8 col-form-label">Bullet Kits</label>
-				<div id="kits-calc" class="col-4"></div>
-			</div>
-		</div>
 
-		<table class="table" id="price-table">
-			<thead>
-			<tr>
-				<th>Item</th>
-				<th>Quantity</th>
-				<th>Unit Price</th>
-				<th>Total Cost</th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr>
-				<td>Installation Kit</td>
-				<td>1</td>
-				<td>$150</td>
-				<td class="row-cost">$150</td>
-			</tr>
-			<tr class="last-static">
-				<td>Bullet Kits</td>
-				<td id="kit-quantity"></td>
-				<td>$21</td>
-				<td id="kit-cost" class="row-cost"></td>
-			</tr>
-			<tr id="total-row">
-				<td><b>Grand Total:</b></td>
-				<td></td>
-				<td></td>
-				<td id="grand-total"></td>
-			</tr>
-			</tbody>
-		</table>
-	</div>
-</div>
-`).appendTo($('#bullet-calculator'));
 
 $(document).ready(() => {
 
@@ -117,12 +43,17 @@ $(document).ready(() => {
   //max feet per section
   const maxVertInches = 3;
 
-
   const kitQuan = $('#kit-quantity');
   const priceTable = $('#price-table');
   const totalRow = $('#total-row');
   const kitCost = $('#kit-cost');
   const grandTotal = $('#grand-total');
+
+  //action buttons
+  const previousButton = $('#previous-button');
+  const nextButton = $('#next-button');
+
+
 
   //runs of cable per section
   let runs = 9;
@@ -130,6 +61,7 @@ $(document).ready(() => {
   let sections = 1;
 
   function init() {
+    previousButton.toggle(false);
     railing.val(50);
 
     railingChange(50);
@@ -141,12 +73,6 @@ $(document).ready(() => {
     sectionsEl.val(1);
 
     sectionsChange(1);
-
-    // heightEl.trigger('change');
-    // railing.trigger('change');
-    // sectionsEl.trigger('change');
-
-
   }
   init();
 
@@ -174,12 +100,10 @@ $(document).ready(() => {
   function railingChange(val) {
     calcFeetByRuns(val)
   }
-
   //get number of kits needed based on number of sections
   function sectionsChange(sections) {
     calcKitsBySections(sections);
   }
-
   //called when height field is modified
   function heightChange(val) {
     runs = Math.ceil((val - 3) / maxVertInches);
@@ -199,13 +123,15 @@ $(document).ready(() => {
     calculateGrandTotal();
     return kitsCalc.text(sections * runs);
   }
-
   //get total feet based on runs * feet
   function calcFeetByRuns(feet) {
-    let totalFeet = feet * runs;
+    let totalFeet = feetTimesRuns(feet);
     calculateSpools(totalFeet);
     //update dom
     return railingCalc.text(totalFeet);
+  }
+  function feetTimesRuns(feet) {
+    return feet * runs;
   }
 
 
@@ -214,7 +140,6 @@ $(document).ready(() => {
     let options = findAllCombos(feet, spoolIncrements, 0, []);
     //return the cheapest spool and add some meta data calculations
     let cheapestSpoolCombo = addTotalsFindCheapest(options);
-    console.log('cheapestSpoolCombo', cheapestSpoolCombo);
     //parse the data into an object ot deal with it
     // let parsedObject = convertToObject(cheapestSpoolCombo);
     //empty parent element where we will append data to
@@ -228,13 +153,17 @@ $(document).ready(() => {
         let spool = cheapestSpoolCombo.types[propName];
         if (spool.amount > 0) {
           $(`<tr class="spool-row">
-                <td>${propName} Spool</td>
+                <td class="spool-name">${propName} Spool</td>
                 <td>${spool.amount}x${spool.feet}'</td>
                 <td>$${spool.cost}</td>
+                <td>-</td>
+                <td>-</td>
                 <td class="row-cost">$${spool.totalCost}</td>
             </tr>`).insertBefore(totalRow);
         }
       });
+    $('#overage').text(cheapestSpoolCombo.overage + "'");
+    $('#ppf').text('$' + cheapestSpoolCombo.ppf);
     calculateGrandTotal()
   }
 
@@ -246,7 +175,7 @@ $(document).ready(() => {
         total += parseInt(numStr);
       }
     });
-    grandTotal.text(`$${total}`);
+    grandTotal.text(`≈ $${total}`);
   }
 
 
@@ -261,6 +190,8 @@ $(document).ready(() => {
       let comboObject = {
         totalCost: 0,
         totalFeet: 0,
+        ppf: 0,
+        overage: 0,
         types: {
           large: {
             amount: 0,
@@ -295,6 +226,10 @@ $(document).ready(() => {
         comboObject.types[name].totalCost += spool.price;
         return spool;
       });
+
+      comboObject.ppf = Math.round(100*(comboObject.totalCost / comboObject.totalFeet));
+
+      comboObject.overage = (comboObject.totalFeet - parseInt(feetTimesRuns(railing.val())));
       return comboObject;
     }).reduce((acc, curr) => acc.totalCost < curr.totalCost ? acc : curr);
 
@@ -328,6 +263,40 @@ $(document).ready(() => {
 
     return combos;
   }
+
+
+  const tabs = $('a[data-toggle="tab"]');
+  tabs.on('shown.bs.tab', toggleActionButtons);
+  previousButton.on('click', () => {
+    $('.nav-tabs a.active').parent().prev('li').find('a').trigger('click');
+  });
+
+  nextButton.on('click', () => {
+    $('.nav-tabs a.active').parent().next('li').find('a').trigger('click');
+  });
+
+  //toggles when next and previous buttons are displayed
+  function toggleActionButtons(e) {
+    let tagId = e.target.hash;
+    switch(tagId) {
+      case '#parameters':
+        previousButton.toggle(false);
+        nextButton.toggle(true);
+        break;
+      case '#estimates':
+        previousButton.toggle(true);
+        nextButton.toggle(true);
+        break;
+      case '#shopping':
+        previousButton.toggle(true);
+        nextButton.toggle(false);
+        break;
+      default:
+    }
+
+  }
+
+
 
 
 });

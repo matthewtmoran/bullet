@@ -11,86 +11,513 @@
 </head>
 <body>
 
-<div id="bullet-calculator"></div>
+<!--<nav class="navbar navbar-inverse navbar-expand-md fixed-top bg-inverse">-->
+<!--<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--<span class="navbar-toggler-icon"></span>-->
+<!--</button>-->
+
+<!--<a class="navbar-brand" href="#">CableBullet Estimator</a>-->
 
 
-<!--<div class="container">-->
-	<!--<div class="row">-->
-		<!--<div class="col-md-4">-->
-			<!--<h2>User Input</h2>-->
-			<!--<form id="dimension-form" action="" class="">-->
-				<!--<div class="form-group row">-->
-					<!--<label for="railing" class="col-8 col-form-label">Railing feet</label>-->
-					<!--<div class="col-4">-->
-						<!--<input id="railing" class="form-control" min="3" placeholder="Railing Feet" type="number">-->
-					<!--</div>-->
-				<!--</div>-->
-				<!--<div class="form-group row">-->
-					<!--<label for="height" class="col-8 col-form-label">Railing height in inches</label>-->
-					<!--<div class="col-4">-->
-						<!--<input id="height" class="form-control" min="" placeholder="(inches)" type="number">-->
-					<!--</div>-->
-				<!--</div>-->
-				<!--<div class="form-group row">-->
-					<!--<label for="sections" class="col-8 col-form-label">Number of Sections</label>-->
-					<!--<div class="col-4">-->
-						<!--<input id="sections" class="form-control" placeholder="Number of Sections" type="number">-->
-					<!--</div>-->
-				<!--</div>-->
-			<!--</form>-->
-		<!--</div>-->
-		<!--<div id="display-totals" class="col-md-4">-->
-			<!--<h2>Calculations</h2>-->
-			<!--<div class="form-group row">-->
-				<!--<label class="col-8 col-form-label">Feet of Cable</label>-->
-				<!--<div id="railing-calc" class="col-4" ></div>-->
-			<!--</div>-->
-			<!--<div class="form-group row">-->
-				<!--<label class="col-8 col-form-label">Runs</label>-->
-				<!--<div id="runs-calc" class="col-4"></div>-->
-			<!--</div>-->
-			<!--<div class="form-group row">-->
-				<!--<label class="col-8 col-form-label">Bullet Kits</label>-->
-				<!--<div id="kits-calc" class="col-4"></div>-->
-			<!--</div>-->
-		<!--</div>-->
-
-		<!--<table class="table" id="price-table">-->
-			<!--<thead>-->
-			<!--<tr>-->
-				<!--<th>Item</th>-->
-				<!--<th>Quantity</th>-->
-				<!--<th>Unit Price</th>-->
-				<!--<th>Total Cost</th>-->
-			<!--</tr>-->
-			<!--</thead>-->
-			<!--<tbody>-->
-			<!--<tr>-->
-				<!--<td>Installation Kit</td>-->
-				<!--<td>1</td>-->
-				<!--<td>$150</td>-->
-				<!--<td class="row-cost">$150</td>-->
-			<!--</tr>-->
-			<!--<tr class="last-static">-->
-				<!--<td>Bullet Kits</td>-->
-				<!--<td id="kit-quantity"></td>-->
-				<!--<td>$21</td>-->
-				<!--<td id="kit-cost" class="row-cost"></td>-->
-			<!--</tr>-->
-			<!--<tr id="total-row">-->
-				<!--<td><b>Grand Total:</b></td>-->
-				<!--<td></td>-->
-				<!--<td></td>-->
-				<!--<td id="grand-total"></td>-->
-			<!--</tr>-->
-			<!--</tbody>-->
-		<!--</table>-->
-	<!--</div>-->
+<!--<div class="collapse navbar-collapse" id="navbarsExampleDefault">-->
+<!--<ul class="navbar-nav mr-auto">-->
+<!--<li class="nav-item active">-->
+<!--<a class="nav-link" href="#">Shop <span class="sr-only">(current)</span></a>-->
+<!--</li>-->
+<!--<li class="nav-item">-->
+<!--<a class="nav-link" href="#">Help</a>-->
+<!--</li>-->
+<!--</ul>-->
 <!--</div>-->
+<!--</nav>-->
+
+<!--<nav class="navbar navbar-inverse fixed-top bg-inverse">-->
+<!--<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--<span class="navbar-toggler-icon"></span>-->
+<!--</button>-->
+<!--<a class="navbar-brand" href="#">CableBullet Estimator</a>-->
+<!--<div class="collapse navbar-collapse" id="navbarsExampleDefault">-->
+<!--<ul class="navbar-nav mr-auto">-->
+<!--<li class="nav-item active">-->
+<!--<a class="nav-link" href="#">Shop <span class="sr-only">(current)</span></a>-->
+<!--</li>-->
+<!--<li class="nav-item">-->
+<!--<a class="nav-link" href="#">Help</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</nav>-->
+
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+	        data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+	        aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<a class="navbar-brand" href="#">CableBullet Estimator</a>
+	<div class="collapse navbar-collapse" id="navbarNavDropdown">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Shop <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Help</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+<div class="jumbotron">
+	<div class="container">
+		<h1 class="display-3">Welcome to the Estimator</h1>
+		<p>This is explainer text... where are you, and why are you here? Because you want to Estimate. This is
+			explainer text... where are you, and why are you here? Because you want to Estimate. This is explainer
+			text... where are you, and why are you here? Because you want to Estimate.</p>
+		<p><a class="btn btn-primary btn-lg" href="#" role="button">Visit Help &raquo;</a></p>
+	</div>
+</div>
+
+<div class="container-fluid">
+	<ul class="nav nav-tabs nav-fill" id="tab-list" role="tablist">
+		<li class="nav-item">
+			<a class="nav-link active" data-toggle="tab" href="#parameters" role="tab"><strong>1</strong> - Project Parameters</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="tab" href="#estimates" role="tab"><strong>2</strong> - Materials
+				Estimates</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="tab" href="#shopping" role="tab"><strong>3</strong> - Shopping List</a></a>
+		</li>
+	</ul>
+
+	<!-- Tab panes -->
+	<div class="tab-content">
+		<div class="tab-pane active" id="parameters" role="tabpanel">
+			<div class="container">
+				<div class="row">
+					<div class="card-group">
+						<div class="card">
+							<img class="card-img-top" src="http://via.placeholder.com/350x150"
+							     alt="Slideshow goes here">
+							<div class="card-block">
+								<h5 class="card-title">Linear Feet of Railing</h5>
+								<p class="card-text">This explains what we mean by 'Linear feet of Railing', and how one
+									might
+									measure it.</p>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									<div class="col-8">
+										Form entry to the right...
+									</div>
+									<div class="col-4">
+										<input id="railing" class="form-control" min="3" placeholder="Railing Feet"
+										       type="number">
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<div class="card">
+							<img class="card-img-top" src="http://via.placeholder.com/350x150"
+							     alt="Slideshow goes here">
+							<div class="card-block">
+								<h5 class="card-title">Number of Sections</h5>
+								<p class="card-text">This Explains what we mean by 'section', and how one might count
+									it.</p>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									<div class="col-8">
+										Form entry to the right...
+									</div>
+									<div class="col-4">
+										<input id="sections" class="form-control" placeholder="Number of Sections"
+										       type="number">
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<div class="card">
+							<img class="card-img-top" src="http://via.placeholder.com/350x150"
+							     alt="Slideshow goes here">
+							<div class="card-block">
+								<h5 class="card-title">Railing Height</h5>
+								<p class="card-text">This Explains what we mean by 'railing height', and how exactly one
+									might
+									measure it.</p>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									<div class="col-8">
+										Form entry to the right...
+									</div>
+									<div class="col-4">
+										<input id="height" class="form-control" min="" placeholder="(inches)"
+										       type="number">
+									</div>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-pane" id="estimates" role="tabpane2">
+			<div class="container">
+				<div class="row">
+					<div class="card-group">
+
+						<div class="card">
+							<img class="card-img-top" src="http://via.placeholder.com/350x150"
+							     alt="Slideshow goes here">
+							<div class="card-img-overlay">
+								<h3 class="card-title text-white"><span id="kits-calc"></span> Kits</h3>
+							</div>
+							<div class="card-block">
+								<h5 class="card-title">Cable Bullet kits</h5>
+								<p class="card-text">This explains different kit options available to the customer,
+									letting them choose how many of each kind (totalling the number above) they'll
+									need..</p>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									<div class="col-8">
+										Form entry to the right...
+									</div>
+									<div class="col-4">
+										<!--<div id="kits-calc"></div>-->
+									</div>
+								</li>
+								<li class="list-group-item">
+									<div class="col-8">
+										Form entry to the right...
+									</div>
+									<div class="col-4">
+									</div>
+								</li>
+								<li class="list-group-item">
+									<div class="col-8">
+										Form entry to the right...
+									</div>
+									<div class="col-4">
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<div class="card">
+							<img class="card-img-top" src="http://via.placeholder.com/350x150"
+							     alt="Slideshow goes here">
+							<div class="card-img-overlay">
+								<h3 class="card-title text-white"><span id="railing-calc"></span>' Cable</h3>
+							</div>
+							<div class="card-block">
+								<h5 class="card-title">Feet of Cable</h5>
+								<p class="card-text">This Explains how much cable, and what kind of cable we want to sell the customer... (what kind they want?)</p>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									<div class="col-8">
+										Form entry to the right...
+									</div>
+									<div class="col-4">
+									</div>
+								</li>
+								<li class="list-group-item">
+									<div class="col-8">
+										Form entry to the right...
+									</div>
+									<div class="col-4">
+									</div>
+								</li>
+								<li class="list-group-item">
+									<div class="col-8">
+										Form entry to the right...
+									</div>
+									<div class="col-4">
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<div class="card">
+							<img class="card-img-top" src="http://via.placeholder.com/350x150"
+							     alt="Slideshow goes here">
+							<div class="card-img-overlay">
+								<h3 class="card-title text-white">Tool Kits</h3>
+							</div>
+							<div class="card-block">
+								<h5 class="card-title">Extras & Tool Kits</h5>
+								<p class="card-text">This is where customers specify the kinds of tools and accessories they think they might need...</p>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									<div class="col-8">
+										Form entry to the right...
+									</div>
+									<div class="col-4">
+										<input id="height" class="form-control" min="" placeholder="(inches)"
+										       type="number">
+									</div>
+								</li>
+								<li class="list-group-item">
+									<div class="col-8">
+										Form entry to the right...
+									</div>
+									<div class="col-4">
+										<input id="height" class="form-control" min="" placeholder="(inches)"
+										       type="number">
+									</div>
+								</li>
+								<li class="list-group-item">
+									<div class="col-8">
+										Form entry to the right...
+									</div>
+									<div class="col-4">
+										<input id="height" class="form-control" min="" placeholder="(inches)"
+										       type="number">
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-pane" id="shopping" role="tabpane3">
+			<div class="container">
+				<div class="row">
+					<div class="card-group">
+
+						<div class="card">
+							<img class="card-img-top" src="http://via.placeholder.com/350x150"
+							     alt="Slideshow goes here">
+							<div class="card-img-overlay">
+								<h3 class="card-title text-white">33 Kits</h3>
+							</div>
+							<div class="card-block">
+								<h5 class="card-title">Cable Bullet kits</h5>
+								<p class="card-text">This explains different kit options available to the customer,
+									letting them choose how many of each kind (totalling the number above) they'll
+									need..</p>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									<div class="col-8">
+										Form entry to the right...
+									</div>
+									<div class="col-4">
+										<!--<div id="kits-calc"></div>-->
+									</div>
+								</li>
+								<li class="list-group-item">
+									<div class="col-8">
+										Form entry to the right...
+									</div>
+									<div class="col-4">
+									</div>
+								</li>
+								<li class="list-group-item">
+									<div class="col-8">
+										Form entry to the right...
+									</div>
+									<div class="col-4">
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<div class="card">
+							<img class="card-img-top" src="http://via.placeholder.com/350x150"
+							     alt="Slideshow goes here">
+							<div class="card-img-overlay">
+								<h3 class="card-title text-white">345' Cable</h3>
+							</div>
+							<div class="card-block">
+								<h5 class="card-title">Feet of Cable</h5>
+								<p class="card-text">This Explains how much cable, and what kind of cable we want to sell the customer... (what kind they want?)</p>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									<div class="col-8">
+										Form entry to the right...
+									</div>
+									<div class="col-4">
+										<input id="sections" class="form-control" placeholder="Number of Sections"
+										       type="number">
+									</div>
+								</li>
+								<li class="list-group-item">
+									<div class="col-8">
+										Form entry to the right...
+									</div>
+									<div class="col-4">
+										<input id="sections" class="form-control" placeholder="Number of Sections"
+										       type="number">
+									</div>
+								</li>
+								<li class="list-group-item">
+									<div class="col-8">
+										Form entry to the right...
+									</div>
+									<div class="col-4">
+										<input id="sections" class="form-control" placeholder="Number of Sections"
+										       type="number">
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<div class="card">
+							<img class="card-img-top" src="http://via.placeholder.com/350x150"
+							     alt="Slideshow goes here">
+							<div class="card-block">
+								<h5 class="card-title">Extras & Tool Kits</h5>
+								<p class="card-text">This is where customers specify the kinds of tools and accessories they think they might need...</p>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									<div class="col-8">
+										Form entry to the right...
+									</div>
+									<div class="col-4">
+										<input id="height" class="form-control" min="" placeholder="(inches)"
+										       type="number">
+									</div>
+								</li>
+								<li class="list-group-item">
+									<div class="col-8">
+										Form entry to the right...
+									</div>
+									<div class="col-4">
+										<input id="height" class="form-control" min="" placeholder="(inches)"
+										       type="number">
+									</div>
+								</li>
+								<li class="list-group-item">
+									<div class="col-8">
+										Form entry to the right...
+									</div>
+									<div class="col-4">
+										<input id="height" class="form-control" min="" placeholder="(inches)"
+										       type="number">
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid">
+	<button id="next-button" type="button" class="btn btn-primary btn-lg btn-block">Next &rarr;</button>
+	<button id="previous-button" type="button" class="btn btn-primary btn-lg btn-block">Back &larr;</button>
+</div>
+
+<!--
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-xs-12">
+			<div class="card">
+				<div class="card-block">
+					<h4 class="card-title">User Input</h4>
+					<form id="dimension-form" action="" class="">
+						<div class="form-group row">
+							<label for="railing" class="col-8 col-form-label">Linear Railing Feet</label>
+							<div class="col-4">
+								<input id="railing" class="form-control" min="3" placeholder="Railing Feet" type="number">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="height" class="col-8 col-form-label">Fill Area (railing height in inches)</label>
+							<div class="col-4">
+								<input id="height" class="form-control" min="" placeholder="(inches)" type="number">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="sections" class="col-8 col-form-label">Number of 'sections'</label>
+							<div class="col-4">
+								<input id="sections" class="form-control" placeholder="Number of Sections" type="number">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="display-totals" class="col-md-6 col-xs-12">
+			<div class="card">
+				<div class="card-block">
+					<h4 class="card-title">Calculations</h4>
+					<div class="form-group row">
+						<label class="col-8 col-form-label">Total Feet of Cable</label>
+						<div id="railing-calc" class="col-4" ></div>
+					</div>
+					<div class="form-group row">
+						<label class="col-8 col-form-label">Number Of Runs</label>
+						<div id="runs-calc" class="col-4"></div>
+					</div>
+					<div class="form-group row">
+						<label class="col-8 col-form-label">Bullet Kits</label>
+						<div id="kits-calc" class="col-4"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="row">
+		<table class="table table-striped" id="price-table">
+			<thead>
+			<tr>
+				<th>Item</th>
+				<th>Quantity</th>
+				<th>Unit Price</th>
+				<th>Price Per Foot</th>
+				<th>Extra Spool</th>
+				<th>Total Cost</th>
+			</tr>
+			</thead>
+			<tbody >
+			<tr>
+				<td>Installation Kit</td>
+				<td>1</td>
+				<td>$150</td>
+				<td>-</td>
+				<td>-</td>
+				<td class="row-cost">$150</td>
+			</tr>
+			<tr class="last-static">
+				<td>Bullet Kits</td>
+				<td id="kit-quantity"></td>
+				<td>$21</td>
+				<td>-</td>
+				<td>-</td>
+				<td id="kit-cost" class="row-cost"></td>
+			</tr>
+			<tr id="total-row">
+				<td><b>Grand Total:</b></td>
+				<td></td>
+				<td></td>
+				<td id="ppf"></td>
+				<td id="overage"></td>
+				<td id="grand-total"></td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+-->
 
 <script src="js/jquery.js"></script>
-<!--<script src="js/tether.js"></script>-->
-<!--<script src="js/bootstrap.js"></script>-->
+<script src="js/tether.js"></script>
+<script src="js/bootstrap.js"></script>
 <script src="js/bullet-calc.js"></script>
 </body>
 </html>
