@@ -11,6 +11,19 @@
 //  2 terminal ends
 //  1 kit for every run
 
+const state = {
+  runs: 0,
+  height: 30,
+  sections: 1,
+  feet: 50,
+  kits: {
+    total: 0
+  }
+};
+
+
+state.totalFeet = state.height * state.feet;
+
 
 $(document).ready(() => {
 
@@ -27,15 +40,14 @@ $(document).ready(() => {
     name: 'Small',
     price: 60
   }];
-
   //inputs
-  const dimensionFormInputs = $('#dimension-form :input');
+  const dimensionFormInputs = $('#parameters :input');
   const sectionsEl = $('#sections');
-  const railing = $('#railing');
+  const feetInput = $('#feet');
   const heightEl = $('#height');
 
   //calculations
-  const railingCalc = $('#railing-calc');
+  const feetCalc = $('#feet-calc');
   const kitsCalc = $('#kits-calc');
   const runsCalc = $('#runs-calc');
   const spools = $('#spools');
@@ -53,7 +65,8 @@ $(document).ready(() => {
   const previousButton = $('#previous-button');
   const nextButton = $('#next-button');
 
-
+  const kitsInputTotal = $('#kits-input-total');
+  const kitsInput = $('#estimates-kits :input.user-input');
 
   //runs of cable per section
   let runs = 9;
@@ -61,30 +74,31 @@ $(document).ready(() => {
   let sections = 1;
 
   function init() {
+    //TODO: move to css at start
     previousButton.toggle(false);
-    railing.val(50);
+    feetInput.val(state.feet);
 
-    railingChange(50);
+    railingChange(state.feet);
 
-    heightEl.val(30);
+    heightEl.val(state.height);
 
-    heightChange(30);
+    heightChange(state.height);
 
-    sectionsEl.val(1);
+    sectionsEl.val(state.sections);
 
-    sectionsChange(1);
+    sectionsChange(state.sections);
   }
   init();
 
   //on input change
   dimensionFormInputs.on('change', (event) => {
-    console.log('triggered');
+    console.log('Input change triggered');
     //id of input
     const fieldId = event.target.id;
     //value of input
     const val = event.target.value;
     //if the railing input is changing
-    if (fieldId === 'railing') {
+    if (fieldId === 'feet') {
       return railingChange(val)
     }
     //calculate runs needed based on railing height
@@ -98,6 +112,7 @@ $(document).ready(() => {
   });
 
   function railingChange(val) {
+    console.log('railing / feet input being modified');
     calcFeetByRuns(val)
   }
   //get number of kits needed based on number of sections
@@ -106,64 +121,60 @@ $(document).ready(() => {
   }
   //called when height field is modified
   function heightChange(val) {
-    runs = Math.ceil((val - 3) / maxVertInches);
+    state.runs = Math.ceil((val - 3) / maxVertInches);
 
-    calcFeetByRuns(railing.val());
+    calcFeetByRuns(feetInput.val());
     calcKitsBySections(sectionsEl.val());
 
-    return runsCalc.text(runs);
+    return runsCalc.text(state.runs);
   }
 
 
   //calculate kits based on sections
   function calcKitsBySections(sections) {
     // update dom
-    kitQuan.text(sections * runs);
-    kitCost.text('$'+21 * (sections * runs));
+    state.kits.quantity = sections * state.runs;
+    kitQuan.text(state.kits.quantity);
+    kitCost.text('$'+21 * (sections * state.runs));
     calculateGrandTotal();
-    return kitsCalc.text(sections * runs);
+    return kitsCalc.text(state.kits.quantity);
   }
   //get total feet based on runs * feet
   function calcFeetByRuns(feet) {
-    let totalFeet = feetTimesRuns(feet);
-    calculateSpools(totalFeet);
+    state.totalFeet = feet * state.runs;
+    calculateSpools(state.totalFeet);
     //update dom
-    return railingCalc.text(totalFeet);
+    return feetCalc.text(state.totalFeet);
   }
-  function feetTimesRuns(feet) {
-    return feet * runs;
-  }
-
 
   function calculateSpools(feet) {
+    console.log('calculating spools');
     //find all valid combinations
     let options = findAllCombos(feet, spoolIncrements, 0, []);
     //return the cheapest spool and add some meta data calculations
     let cheapestSpoolCombo = addTotalsFindCheapest(options);
     //parse the data into an object ot deal with it
-    // let parsedObject = convertToObject(cheapestSpoolCombo);
-    //empty parent element where we will append data to
 
     //find all spool rows and remove them
-    $('.spool-row').remove();
+    // $('.spool-row').remove();
 
     //iterate through types of spool and append data according ot amount
-    Object.getOwnPropertyNames(cheapestSpoolCombo.types)
-      .forEach((propName) => {
-        let spool = cheapestSpoolCombo.types[propName];
-        if (spool.amount > 0) {
-          $(`<tr class="spool-row">
-                <td class="spool-name">${propName} Spool</td>
-                <td>${spool.amount}x${spool.feet}'</td>
-                <td>$${spool.cost}</td>
-                <td>-</td>
-                <td>-</td>
-                <td class="row-cost">$${spool.totalCost}</td>
-            </tr>`).insertBefore(totalRow);
-        }
-      });
-    $('#overage').text(cheapestSpoolCombo.overage + "'");
-    $('#ppf').text('$' + cheapestSpoolCombo.ppf);
+    // Object.getOwnPropertyNames(cheapestSpoolCombo.types)
+    //   .forEach((propName) => {
+    //     let spool = cheapestSpoolCombo.types[propName];
+    //     if (spool.amount > 0) {
+    //       $(`<tr class="spool-row">
+    //             <td class="spool-name">${propName} Spool</td>
+    //             <td>${spool.amount}x${spool.feet}'</td>
+    //             <td>$${spool.cost}</td>
+    //             <td>-</td>
+    //             <td>-</td>
+    //             <td class="row-cost">$${spool.totalCost}</td>
+    //         </tr>`).insertBefore(totalRow);
+    //     }
+    //   });
+    // $('#overage').text(cheapestSpoolCombo.overage + "'");
+    // $('#ppf').text('$' + cheapestSpoolCombo.ppf);
     calculateGrandTotal()
   }
 
@@ -177,8 +188,6 @@ $(document).ready(() => {
     });
     grandTotal.text(`≈ $${total}`);
   }
-
-
 
   //creats an easy to work with object for each combination and returns the cheapest option
   //allCombinations is an array of arrays
@@ -229,7 +238,7 @@ $(document).ready(() => {
 
       comboObject.ppf = Math.round(100*(comboObject.totalCost / comboObject.totalFeet));
 
-      comboObject.overage = (comboObject.totalFeet - parseInt(feetTimesRuns(railing.val())));
+      comboObject.overage = (comboObject.totalFeet - state.totalFeet);
       return comboObject;
     }).reduce((acc, curr) => acc.totalCost < curr.totalCost ? acc : curr);
 
@@ -296,6 +305,39 @@ $(document).ready(() => {
 
   }
 
+
+
+  const estmiateKitsWarn = $('#estimates-kits .warn');
+  const estmiateKitsDanger = $('#estimates-kits .danger');
+  const estimateKitsFeedback = $('#estimates-kits .invalid-feedback');
+
+  kitsInput.on('change', calculateKitsTotal);
+
+  function calculateKitsTotal(event) {
+    state.kits.total = getTotalFromInputs(kitsInput);
+    kitsInputTotal.val(state.kits.total);
+    if (state.kits.total < state.kits.quantity) {
+      estimateKitsFeedback.toggle(false);
+      estmiateKitsWarn.toggle(true);
+    }
+    if (state.kits.total > state.kits.quantity) {
+      estimateKitsFeedback.toggle(false);
+      estmiateKitsDanger.toggle(true);
+    }
+    if (state.kits.total === state.kits.quantity) {
+      estimateKitsFeedback.toggle(false);
+    }
+  }
+
+  function getTotalFromInputs(inputs) {
+    let total = 0;
+    inputs.each(function (index, data) {
+      if (!!parseInt($(this).val())) {
+        total += parseInt($(this).val());
+      }
+    });
+    return total;
+  }
 
 
 
