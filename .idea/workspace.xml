@@ -2,360 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c4e09b4-0c8b-4dc4-aa80-03b7d5682e0c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/partials/bottomButtons.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/partials/estimatesContent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/partials/jumbotron.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/partials/nav.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/partials/parametersContent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/partials/shoppingContent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/partials/tabNav.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/Gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/grunt/change-version.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/grunt/configBridge.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/grunt/gcp-key.json.enc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/grunt/npm-shrinkwrap.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/grunt/postcss.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/grunt/sauce_browsers.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/grunt/upload-preview.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/tests/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/tests/unit/alert.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/tests/unit/button.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/tests/unit/carousel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/tests/unit/collapse.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/tests/unit/dropdown.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/tests/unit/modal.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/tests/unit/phantom.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/tests/unit/popover.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/tests/unit/scrollspy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/tests/unit/tab.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/tests/unit/tooltip.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/tests/vendor/qunit.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_custom.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_normalize.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_responsive-embed.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_cards.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_transforms.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/AUTHORS.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/dist/core.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.min.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.slim.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.slim.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/dist/jquery.slim.min.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/external/sizzle/LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/external/sizzle/dist/sizzle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/external/sizzle/dist/sizzle.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/external/sizzle/dist/sizzle.min.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/.eslintrc.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/jsonp.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/load.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/parseXML.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/script.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/var/location.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/var/nonce.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/var/rquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/ajax/xhr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/attributes.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/attributes/attr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/attributes/classes.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/attributes/prop.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/attributes/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/attributes/val.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/callbacks.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/core.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/DOMEval.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/access.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/init.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/nodeName.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/parseHTML.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/ready-no-deferred.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/ready.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/readyException.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/stripAndCollapse.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/core/var/rsingleTag.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/addGetHookIf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/adjustCSS.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/curCSS.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/hiddenVisibleSelectors.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/showHide.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/var/cssExpand.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/var/getStyles.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/var/isHiddenWithinTree.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/var/rmargin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/var/rnumnonpx.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/css/var/swap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/data.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/data/Data.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/data/var/acceptData.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/data/var/dataPriv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/data/var/dataUser.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/deferred.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/deferred/exceptionHook.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/deprecated.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/dimensions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/effects.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/effects/Tween.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/effects/animatedSelector.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/event.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/event/ajax.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/event/alias.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/event/focusin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/event/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/event/trigger.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/exports/amd.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/exports/global.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/_evalUrl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/buildFragment.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/getAll.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/setGlobalEval.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/var/rcheckableType.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/var/rscriptType.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/var/rtagName.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/manipulation/wrapMap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/offset.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/queue.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/queue/delay.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/selector-native.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/selector-sizzle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/selector.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/serialize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/traversing.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/traversing/findFilter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/traversing/var/dir.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/traversing/var/rneedsContext.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/traversing/var/siblings.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/ObjectFunctionString.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/arr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/class2type.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/concat.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/document.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/documentElement.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/fnToString.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/getProto.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/hasOwn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/indexOf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/pnum.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/push.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/rcssNum.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/rnothtmlwhite.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/slice.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/var/toString.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/jquery/src/wrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/.hsdoc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/component.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/dist/css/tether-theme-arrows-dark.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/dist/css/tether-theme-arrows-dark.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/dist/css/tether-theme-arrows.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/dist/css/tether-theme-arrows.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/dist/css/tether-theme-basic.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/dist/css/tether-theme-basic.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/dist/css/tether.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/dist/css/tether.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/dist/js/tether.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/dist/js/tether.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/1-Overview/1-why_you_should_use_tether.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/1-Overview/2-repositioning.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/1-Overview/3-why_we_dont_support_IE_8.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/2-Examples/1-list_of_examples.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/2-Examples/2-projects_using_tether.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/3-Advanced/1-embedding_tether.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/3-Advanced/2-extending_tether.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/coffee/intro.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/css/intro.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/intro.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/js/intro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/js/markAttachment.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/sass/intro.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/welcome/browser-demo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/welcome/coffee/welcome.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/welcome/css/browser-demo.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/welcome/css/prism.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/welcome/css/welcome.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/welcome/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/welcome/js/drop.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/welcome/js/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/welcome/js/log.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/welcome/js/tether-v0.1.3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/welcome/js/welcome.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/welcome/sass/_inline-block.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/welcome/sass/browser-demo.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/docs/welcome/sass/welcome.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/chosen/chosen-sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/chosen/chosen-sprite@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/chosen/chosen.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/chosen/chosen.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/chosen/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/common/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/content-visible/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/dolls/dolls.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/dolls/dolls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/dolls/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/element-scroll/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/enable-disable/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/facebook/facebook.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/facebook/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/out-of-bounds/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/pin/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/resources/css/base.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/resources/js/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/resources/js/log.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/scroll/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/simple/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/testbed/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/tooltip/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/viewport/colors.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/examples/viewport/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/gulpfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/src/css/helpers/_tether-theme-arrows.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/src/css/helpers/_tether-theme-basic.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/src/css/helpers/_tether.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/src/css/mixins/_inline-block.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/src/css/mixins/_pie-clearfix.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/src/css/tether-theme-arrows-dark.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/src/css/tether-theme-arrows.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/src/css/tether-theme-basic.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/src/css/tether.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/src/js/abutment.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/src/js/constraint.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/src/js/markAttachment.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/src/js/shift.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/src/js/tether.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/src/js/utils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/tether/yarn.lock" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bootstrap.js" afterPath="$PROJECT_DIR$/js/bootstrap.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bullet-calc.js" afterPath="$PROJECT_DIR$/js/bullet-calc.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/README.md" afterPath="$PROJECT_DIR$/node_modules/bootstrap/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-grid.css" afterPath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-grid.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-grid.css.map" afterPath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-grid.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-grid.min.css" afterPath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-grid.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-grid.min.css.map" afterPath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-grid.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-reboot.css" afterPath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-reboot.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-reboot.css.map" afterPath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-reboot.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-reboot.min.css" afterPath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-reboot.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-reboot.min.css.map" afterPath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-reboot.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.css" afterPath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.min.css.map" afterPath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/alert.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/alert.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/button.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/button.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/carousel.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/carousel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/collapse.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/collapse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/dropdown.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/dropdown.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/modal.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/modal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/popover.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/popover.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/scrollspy.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/scrollspy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/tab.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/tab.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/tooltip.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/tooltip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/util.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap/js/dist/util.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/alert.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap/js/src/alert.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/button.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap/js/src/button.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/carousel.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap/js/src/carousel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/collapse.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap/js/src/collapse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/dropdown.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap/js/src/dropdown.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/modal.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap/js/src/modal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/popover.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap/js/src/popover.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/scrollspy.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap/js/src/scrollspy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/tab.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap/js/src/tab.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/tooltip.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap/js/src/tooltip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/js/src/util.js" afterPath="$PROJECT_DIR$/node_modules/bootstrap/js/src/util.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/package.json" afterPath="$PROJECT_DIR$/node_modules/bootstrap/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_alert.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_alert.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_badge.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_badge.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_breadcrumb.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_breadcrumb.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_button-group.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_button-group.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_buttons.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_buttons.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_card.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_card.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_carousel.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_carousel.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_close.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_close.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_code.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_code.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_custom-forms.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_custom-forms.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_dropdown.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_dropdown.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_forms.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_forms.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_grid.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_grid.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_images.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_images.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_input-group.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_input-group.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_jumbotron.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_jumbotron.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_list-group.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_list-group.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_mixins.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_mixins.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_modal.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_modal.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_nav.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_nav.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_navbar.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_navbar.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_pagination.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_pagination.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_popover.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_popover.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_print.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_print.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_progress.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_progress.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_reboot.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_reboot.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_tables.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_tables.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_tooltip.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_tooltip.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_transitions.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_transitions.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_type.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_type.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_utilities.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_utilities.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/_variables.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/_variables.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/bootstrap-grid.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/bootstrap-grid.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/bootstrap-reboot.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/bootstrap-reboot.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/bootstrap.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/bootstrap.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_alert.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_alert.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_background-variant.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_background-variant.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_badge.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_badge.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_border-radius.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_border-radius.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_breakpoints.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_breakpoints.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_buttons.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_buttons.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_clearfix.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_clearfix.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_float.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_float.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_forms.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_forms.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_gradients.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_gradients.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_grid-framework.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_grid-framework.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_grid.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_grid.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_hover.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_hover.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_image.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_image.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_list-group.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_list-group.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_nav-divider.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_nav-divider.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_navbar-align.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_navbar-align.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_pagination.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_pagination.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_reset-text.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_reset-text.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_resize.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_resize.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_screen-reader.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_screen-reader.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_text-emphasis.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_text-emphasis.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_text-hide.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_text-hide.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_text-truncate.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_text-truncate.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_visibility.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/mixins/_visibility.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_align.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_align.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_background.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_background.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_borders.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_borders.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_display.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_display.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_flex.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_flex.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_position.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_position.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_sizing.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_sizing.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_spacing.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_spacing.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_text.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_text.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_visibility.scss" afterPath="$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_visibility.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/bootstrap.css" afterPath="$PROJECT_DIR$/styles/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/partials/estimatesContent.php" afterPath="$PROJECT_DIR$/partials/estimatesContent.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -366,25 +15,48 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.47228914">
+    <splitter split-orientation="horizontal" split-proportion="0.41087613">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
           <file leaf-file-name="bullet-calc.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/bullet-calc.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="393">
-                  <caret line="314" column="0" lean-forward="true" selection-start-line="314" selection-start-column="0" selection-end-line="314" selection-end-column="0" />
+                <state relative-caret-position="1980">
+                  <caret line="293" column="62" lean-forward="true" selection-start-line="293" selection-start-column="4" selection-end-line="293" selection-end-column="62" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
-                    <element signature="e#536#590#0" expanded="false" />
-                    <element signature="e#592#649#0" expanded="false" />
-                    <element signature="e#651#704#0" expanded="false" />
-                    <element signature="e#2664#2703#0" expanded="false" />
-                    <element signature="e#4761#4980#0" expanded="false" />
-                    <element signature="e#5368#5871#0" expanded="false" />
-                    <element signature="e#6812#7326#0" expanded="false" />
-                    <element signature="e#7746#8156#0" expanded="false" />
-                    <marker date="1515959436557" expanded="true" signature="4216:4529" ph="..." />
+                    <element signature="e#914#1187#0" expanded="false" />
+                    <element signature="e#3198#3775#0" expanded="false" />
+                    <element signature="e#3849#4347#0" expanded="false" />
+                    <element signature="e#4423#4620#0" expanded="false" />
+                    <element signature="e#4710#4902#0" expanded="false" />
+                    <element signature="e#4973#5396#0" expanded="false" />
+                    <element signature="e#5568#5720#0" expanded="false" />
+                    <element signature="e#5776#5844#0" expanded="false" />
+                    <element signature="e#5914#5985#0" expanded="false" />
+                    <element signature="e#6054#6104#0" expanded="false" />
+                    <element signature="e#6170#7416#0" expanded="false" />
+                    <element signature="e#7783#8193#0" expanded="false" />
+                    <element signature="e#9008#9661#0" expanded="false" />
+                    <element signature="e#9746#10090#0" expanded="false" />
+                    <element signature="e#10186#10366#0" expanded="false" />
+                    <element signature="e#10476#10695#0" expanded="false" />
+                    <element signature="e#10881#12419#0" expanded="false" />
+                    <element signature="e#11083#11586#0" expanded="false" />
+                    <element signature="e#12526#13040#0" expanded="false" />
+                    <marker date="1516129636277" expanded="true" signature="6906:7219" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/index.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="591">
+                  <caret line="169" column="36" lean-forward="false" selection-start-line="169" selection-start-column="36" selection-end-line="169" selection-end-column="36" />
+                  <folding>
+                    <marker date="1516125880182" expanded="true" signature="2624:5178" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -394,11 +66,31 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+          <file leaf-file-name="bullet-calc.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/bullet-calc.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="265">
+                  <caret line="167" column="28" lean-forward="true" selection-start-line="167" selection-start-column="28" selection-end-line="167" selection-end-column="28" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                    <element signature="e#4710#4902#0" expanded="false" />
+                    <element signature="e#4973#5396#0" expanded="false" />
+                    <element signature="e#5914#5985#0" expanded="false" />
+                    <element signature="e#6170#7416#0" expanded="false" />
+                    <element signature="e#7783#8193#0" expanded="false" />
+                    <marker date="1516129636277" expanded="true" signature="920:1091" ph="{&quot;name&quot;: 'Large'...}" />
+                    <marker date="1516129636277" expanded="true" signature="1091:1096" ph="{&quot;name&quot;: 'Medium'...}" />
+                    <marker date="1516129636277" expanded="true" signature="6906:7219" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="parametersContent.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/partials/parametersContent.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="945">
-                  <caret line="45" column="57" lean-forward="true" selection-start-line="45" selection-start-column="57" selection-end-line="45" selection-end-column="57" />
+                <state relative-caret-position="230">
+                  <caret line="44" column="69" lean-forward="false" selection-start-line="44" selection-start-column="69" selection-end-line="44" selection-end-column="69" />
                   <folding />
                 </state>
               </provider>
@@ -407,12 +99,9 @@
           <file leaf-file-name="estimatesContent.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/partials/estimatesContent.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="467">
-                  <caret line="63" column="93" lean-forward="false" selection-start-line="63" selection-start-column="93" selection-end-line="63" selection-end-column="93" />
-                  <folding>
-                    <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                  </folding>
+                <state relative-caret-position="399">
+                  <caret line="56" column="65" lean-forward="false" selection-start-line="56" selection-start-column="65" selection-end-line="56" selection-end-column="65" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -420,8 +109,8 @@
           <file leaf-file-name="shoppingContent.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/partials/shoppingContent.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="698">
-                  <caret line="122" column="51" lean-forward="true" selection-start-line="122" selection-start-column="51" selection-end-line="122" selection-end-column="51" />
+                <state relative-caret-position="261">
+                  <caret line="108" column="42" lean-forward="false" selection-start-line="108" selection-start-column="42" selection-end-line="108" selection-end-column="42" />
                   <folding />
                 </state>
               </provider>
@@ -433,17 +122,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>outputElements</find>
-      <find>col-3</find>
-      <find>valueLeft</find>
-      <find>waysOfDoingNcents</find>
-      <find>rxns</find>
-      <find>sections</find>
-      <find>trigger</find>
-      <find>change</find>
-      <find>Math.round(100*X)</find>
-      <find>kits-calc</find>
-      <find>d</find>
       <find>a</find>
       <find>al</find>
       <find>allskdjlksj</find>
@@ -455,11 +133,25 @@
       <find>x150</find>
       <find>railingCalc</find>
       <find>railingChange</find>
-      <find>calcFeetByRuns</find>
       <find>railing</find>
-      <find>feetCalc</find>
       <find>plaintext</find>
       <find>card-block</find>
+      <find>f</find>
+      <find>sections</find>
+      <find>feetCalcDisplay</find>
+      <find>feetCalcDisplay.te</find>
+      <find>calcFeetByRuns</find>
+      <find>kitQuan</find>
+      <find>kitsCalc</find>
+      <find>kits-calc</find>
+      <find>kitsCalcDisplay</find>
+      <find>kit-quantity</find>
+      <find>feetCalc</find>
+      <find>runsCalc</find>
+      <find>runs</find>
+      <find>runs-calc</find>
+      <find>runsCalcDisplay</find>
+      <find>maxVertInches</find>
     </findStrings>
     <replaceStrings>
       <replace>col-4</replace>
@@ -473,7 +165,12 @@
       <replace>feet</replace>
       <replace />
       <replace>card-body</replace>
+      <replace>parametersInput</replace>
+      <replace>heightInputEl</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>C:\xampp\htdocs\development\_moranmedia\bullet\partials</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -497,14 +194,14 @@
         <option value="$PROJECT_DIR$/partials/tab-nav.php" />
         <option value="$PROJECT_DIR$/partials/bottomButtons.php" />
         <option value="$PROJECT_DIR$/partials/tabContent.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/data.js" />
         <option value="$USER_HOME$/AppData/Roaming/Glossa/storage/glossa-transcription" />
         <option value="$PROJECT_DIR$/partials/nav.php" />
         <option value="$PROJECT_DIR$/partials/parametersContent.php" />
         <option value="$PROJECT_DIR$/partials/shoppingContent.php" />
-        <option value="$PROJECT_DIR$/partials/estimatesContent.php" />
+        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/js/bullet-calc.js" />
+        <option value="$PROJECT_DIR$/partials/estimatesContent.php" />
       </list>
     </option>
   </component>
@@ -561,122 +258,10 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bullet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bullet" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bullet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bullet" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bullet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bullet" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bullet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bullet" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bullet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bullet" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bullet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bullet" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -685,7 +270,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Roaming/Glossa/storage/glossa-transcription" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../glossa-react" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
@@ -813,25 +398,28 @@
       <workItem from="1515703367140" duration="5569000" />
       <workItem from="1515712995079" duration="9197000" />
       <workItem from="1515882514387" duration="1422000" />
-      <workItem from="1515954444943" duration="4979000" />
+      <workItem from="1515954444943" duration="5750000" />
+      <workItem from="1515971883750" duration="6372000" />
+      <workItem from="1516060522068" duration="11336000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119465000" />
+    <option name="totallyTimeSpent" value="137944000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="2418" height="1318" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.114005126" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11117078" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32437122" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20815265" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27180067" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -839,7 +427,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -863,15 +450,26 @@
           <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#536#590#0" expanded="false" />
-            <element signature="e#592#649#0" expanded="false" />
-            <element signature="e#651#704#0" expanded="false" />
-            <element signature="e#2664#2703#0" expanded="false" />
-            <element signature="e#4761#4980#0" expanded="false" />
-            <element signature="e#5368#5871#0" expanded="false" />
-            <element signature="e#6812#7326#0" expanded="false" />
-            <element signature="e#7746#8156#0" expanded="false" />
-            <marker date="1515959436557" expanded="true" signature="4216:4529" ph="..." />
+            <element signature="e#914#1187#0" expanded="false" />
+            <element signature="e#3198#3775#0" expanded="false" />
+            <element signature="e#3849#4347#0" expanded="false" />
+            <element signature="e#4423#4620#0" expanded="false" />
+            <element signature="e#4710#4902#0" expanded="false" />
+            <element signature="e#4973#5396#0" expanded="false" />
+            <element signature="e#5568#5720#0" expanded="false" />
+            <element signature="e#5776#5844#0" expanded="false" />
+            <element signature="e#5914#5985#0" expanded="false" />
+            <element signature="e#6054#6104#0" expanded="false" />
+            <element signature="e#6170#7416#0" expanded="false" />
+            <element signature="e#7783#8193#0" expanded="false" />
+            <element signature="e#9008#9661#0" expanded="false" />
+            <element signature="e#9746#10090#0" expanded="false" />
+            <element signature="e#10186#10366#0" expanded="false" />
+            <element signature="e#10476#10695#0" expanded="false" />
+            <element signature="e#10881#12419#0" expanded="false" />
+            <element signature="e#11083#11586#0" expanded="false" />
+            <element signature="e#12526#13040#0" expanded="false" />
+            <marker date="1516129636277" expanded="true" signature="6906:7219" ph="..." />
           </folding>
         </state>
       </provider>
@@ -881,7 +479,7 @@
         <state relative-caret-position="1428">
           <caret line="68" column="37" lean-forward="false" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
           <folding>
-            <marker date="1515714446958" expanded="true" signature="2624:5178" ph="..." />
+            <marker date="1516125880182" expanded="true" signature="2624:5178" ph="..." />
           </folding>
         </state>
       </provider>
@@ -893,15 +491,26 @@
           <caret line="175" column="19" lean-forward="false" selection-start-line="175" selection-start-column="19" selection-end-line="175" selection-end-column="19" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#536#590#0" expanded="false" />
-            <element signature="e#592#649#0" expanded="false" />
-            <element signature="e#651#704#0" expanded="false" />
-            <element signature="e#2664#2703#0" expanded="false" />
-            <element signature="e#4761#4980#0" expanded="false" />
-            <element signature="e#5368#5871#0" expanded="false" />
-            <element signature="e#6812#7326#0" expanded="false" />
-            <element signature="e#7746#8156#0" expanded="false" />
-            <marker date="1515959436557" expanded="true" signature="4216:4529" ph="..." />
+            <element signature="e#914#1187#0" expanded="false" />
+            <element signature="e#3198#3775#0" expanded="false" />
+            <element signature="e#3849#4347#0" expanded="false" />
+            <element signature="e#4423#4620#0" expanded="false" />
+            <element signature="e#4710#4902#0" expanded="false" />
+            <element signature="e#4973#5396#0" expanded="false" />
+            <element signature="e#5568#5720#0" expanded="false" />
+            <element signature="e#5776#5844#0" expanded="false" />
+            <element signature="e#5914#5985#0" expanded="false" />
+            <element signature="e#6054#6104#0" expanded="false" />
+            <element signature="e#6170#7416#0" expanded="false" />
+            <element signature="e#7783#8193#0" expanded="false" />
+            <element signature="e#9008#9661#0" expanded="false" />
+            <element signature="e#9746#10090#0" expanded="false" />
+            <element signature="e#10186#10366#0" expanded="false" />
+            <element signature="e#10476#10695#0" expanded="false" />
+            <element signature="e#10881#12419#0" expanded="false" />
+            <element signature="e#11083#11586#0" expanded="false" />
+            <element signature="e#12526#13040#0" expanded="false" />
+            <marker date="1516129636277" expanded="true" signature="6906:7219" ph="..." />
           </folding>
         </state>
       </provider>
@@ -911,7 +520,7 @@
         <state relative-caret-position="1428">
           <caret line="68" column="37" lean-forward="false" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
           <folding>
-            <marker date="1515714446958" expanded="true" signature="2624:5178" ph="..." />
+            <marker date="1516125880182" expanded="true" signature="2624:5178" ph="..." />
           </folding>
         </state>
       </provider>
@@ -923,15 +532,26 @@
           <caret line="175" column="19" lean-forward="false" selection-start-line="175" selection-start-column="19" selection-end-line="175" selection-end-column="19" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#536#590#0" expanded="false" />
-            <element signature="e#592#649#0" expanded="false" />
-            <element signature="e#651#704#0" expanded="false" />
-            <element signature="e#2664#2703#0" expanded="false" />
-            <element signature="e#4761#4980#0" expanded="false" />
-            <element signature="e#5368#5871#0" expanded="false" />
-            <element signature="e#6812#7326#0" expanded="false" />
-            <element signature="e#7746#8156#0" expanded="false" />
-            <marker date="1515959436557" expanded="true" signature="4216:4529" ph="..." />
+            <element signature="e#914#1187#0" expanded="false" />
+            <element signature="e#3198#3775#0" expanded="false" />
+            <element signature="e#3849#4347#0" expanded="false" />
+            <element signature="e#4423#4620#0" expanded="false" />
+            <element signature="e#4710#4902#0" expanded="false" />
+            <element signature="e#4973#5396#0" expanded="false" />
+            <element signature="e#5568#5720#0" expanded="false" />
+            <element signature="e#5776#5844#0" expanded="false" />
+            <element signature="e#5914#5985#0" expanded="false" />
+            <element signature="e#6054#6104#0" expanded="false" />
+            <element signature="e#6170#7416#0" expanded="false" />
+            <element signature="e#7783#8193#0" expanded="false" />
+            <element signature="e#9008#9661#0" expanded="false" />
+            <element signature="e#9746#10090#0" expanded="false" />
+            <element signature="e#10186#10366#0" expanded="false" />
+            <element signature="e#10476#10695#0" expanded="false" />
+            <element signature="e#10881#12419#0" expanded="false" />
+            <element signature="e#11083#11586#0" expanded="false" />
+            <element signature="e#12526#13040#0" expanded="false" />
+            <marker date="1516129636277" expanded="true" signature="6906:7219" ph="..." />
           </folding>
         </state>
       </provider>
@@ -941,7 +561,7 @@
         <state relative-caret-position="1428">
           <caret line="68" column="37" lean-forward="false" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
           <folding>
-            <marker date="1515714446958" expanded="true" signature="2624:5178" ph="..." />
+            <marker date="1516125880182" expanded="true" signature="2624:5178" ph="..." />
           </folding>
         </state>
       </provider>
@@ -952,15 +572,26 @@
           <caret line="141" column="68" lean-forward="false" selection-start-line="141" selection-start-column="68" selection-end-line="141" selection-end-column="68" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#536#590#0" expanded="false" />
-            <element signature="e#592#649#0" expanded="false" />
-            <element signature="e#651#704#0" expanded="false" />
-            <element signature="e#2664#2703#0" expanded="false" />
-            <element signature="e#4761#4980#0" expanded="false" />
-            <element signature="e#5368#5871#0" expanded="false" />
-            <element signature="e#6812#7326#0" expanded="false" />
-            <element signature="e#7746#8156#0" expanded="false" />
-            <marker date="1515959436557" expanded="true" signature="4216:4529" ph="..." />
+            <element signature="e#914#1187#0" expanded="false" />
+            <element signature="e#3198#3775#0" expanded="false" />
+            <element signature="e#3849#4347#0" expanded="false" />
+            <element signature="e#4423#4620#0" expanded="false" />
+            <element signature="e#4710#4902#0" expanded="false" />
+            <element signature="e#4973#5396#0" expanded="false" />
+            <element signature="e#5568#5720#0" expanded="false" />
+            <element signature="e#5776#5844#0" expanded="false" />
+            <element signature="e#5914#5985#0" expanded="false" />
+            <element signature="e#6054#6104#0" expanded="false" />
+            <element signature="e#6170#7416#0" expanded="false" />
+            <element signature="e#7783#8193#0" expanded="false" />
+            <element signature="e#9008#9661#0" expanded="false" />
+            <element signature="e#9746#10090#0" expanded="false" />
+            <element signature="e#10186#10366#0" expanded="false" />
+            <element signature="e#10476#10695#0" expanded="false" />
+            <element signature="e#10881#12419#0" expanded="false" />
+            <element signature="e#11083#11586#0" expanded="false" />
+            <element signature="e#12526#13040#0" expanded="false" />
+            <marker date="1516129636277" expanded="true" signature="6906:7219" ph="..." />
           </folding>
         </state>
       </provider>
@@ -970,7 +601,7 @@
         <state relative-caret-position="1029">
           <caret line="49" column="51" lean-forward="false" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
           <folding>
-            <marker date="1515714446958" expanded="true" signature="2624:5178" ph="..." />
+            <marker date="1516125880182" expanded="true" signature="2624:5178" ph="..." />
           </folding>
         </state>
       </provider>
@@ -981,15 +612,26 @@
           <caret line="79" column="32" lean-forward="true" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#536#590#0" expanded="false" />
-            <element signature="e#592#649#0" expanded="false" />
-            <element signature="e#651#704#0" expanded="false" />
-            <element signature="e#2664#2703#0" expanded="false" />
-            <element signature="e#4761#4980#0" expanded="false" />
-            <element signature="e#5368#5871#0" expanded="false" />
-            <element signature="e#6812#7326#0" expanded="false" />
-            <element signature="e#7746#8156#0" expanded="false" />
-            <marker date="1515959436557" expanded="true" signature="4216:4529" ph="..." />
+            <element signature="e#914#1187#0" expanded="false" />
+            <element signature="e#3198#3775#0" expanded="false" />
+            <element signature="e#3849#4347#0" expanded="false" />
+            <element signature="e#4423#4620#0" expanded="false" />
+            <element signature="e#4710#4902#0" expanded="false" />
+            <element signature="e#4973#5396#0" expanded="false" />
+            <element signature="e#5568#5720#0" expanded="false" />
+            <element signature="e#5776#5844#0" expanded="false" />
+            <element signature="e#5914#5985#0" expanded="false" />
+            <element signature="e#6054#6104#0" expanded="false" />
+            <element signature="e#6170#7416#0" expanded="false" />
+            <element signature="e#7783#8193#0" expanded="false" />
+            <element signature="e#9008#9661#0" expanded="false" />
+            <element signature="e#9746#10090#0" expanded="false" />
+            <element signature="e#10186#10366#0" expanded="false" />
+            <element signature="e#10476#10695#0" expanded="false" />
+            <element signature="e#10881#12419#0" expanded="false" />
+            <element signature="e#11083#11586#0" expanded="false" />
+            <element signature="e#12526#13040#0" expanded="false" />
+            <marker date="1516129636277" expanded="true" signature="6906:7219" ph="..." />
           </folding>
         </state>
       </provider>
@@ -999,7 +641,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1515714446958" expanded="true" signature="2624:5178" ph="..." />
+            <marker date="1516125880182" expanded="true" signature="2624:5178" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1045,15 +687,26 @@
           <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#536#590#0" expanded="false" />
-            <element signature="e#592#649#0" expanded="false" />
-            <element signature="e#651#704#0" expanded="false" />
-            <element signature="e#2664#2703#0" expanded="false" />
-            <element signature="e#4761#4980#0" expanded="false" />
-            <element signature="e#5368#5871#0" expanded="false" />
-            <element signature="e#6812#7326#0" expanded="false" />
-            <element signature="e#7746#8156#0" expanded="false" />
-            <marker date="1515959436557" expanded="true" signature="4216:4529" ph="..." />
+            <element signature="e#914#1187#0" expanded="false" />
+            <element signature="e#3198#3775#0" expanded="false" />
+            <element signature="e#3849#4347#0" expanded="false" />
+            <element signature="e#4423#4620#0" expanded="false" />
+            <element signature="e#4710#4902#0" expanded="false" />
+            <element signature="e#4973#5396#0" expanded="false" />
+            <element signature="e#5568#5720#0" expanded="false" />
+            <element signature="e#5776#5844#0" expanded="false" />
+            <element signature="e#5914#5985#0" expanded="false" />
+            <element signature="e#6054#6104#0" expanded="false" />
+            <element signature="e#6170#7416#0" expanded="false" />
+            <element signature="e#7783#8193#0" expanded="false" />
+            <element signature="e#9008#9661#0" expanded="false" />
+            <element signature="e#9746#10090#0" expanded="false" />
+            <element signature="e#10186#10366#0" expanded="false" />
+            <element signature="e#10476#10695#0" expanded="false" />
+            <element signature="e#10881#12419#0" expanded="false" />
+            <element signature="e#11083#11586#0" expanded="false" />
+            <element signature="e#12526#13040#0" expanded="false" />
+            <marker date="1516129636277" expanded="true" signature="6906:7219" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1065,13 +718,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/jquery/src/ajax.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/jquery/src/ajax.js" />
     <entry file="file://$PROJECT_DIR$/js/tether.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1097,13 +744,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/Gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="83" column="6" lean-forward="true" selection-start-line="83" selection-start-column="6" selection-end-line="83" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/Gruntfile.js" />
     <entry file="file://$PROJECT_DIR$/program.js" />
     <entry file="file://$PROJECT_DIR$/vba" />
     <entry file="file://$PROJECT_DIR$/test.js" />
@@ -1167,16 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="827">
-          <caret line="118" column="71" lean-forward="false" selection-start-line="118" selection-start-column="67" selection-end-line="118" selection-end-column="71" />
-          <folding>
-            <marker date="1515714446958" expanded="true" signature="2624:5178" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bullet/step2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1305">
@@ -1202,7 +833,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1210,7 +840,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1232,46 +861,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/partials/parametersContent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="45" column="57" lean-forward="true" selection-start-line="45" selection-start-column="57" selection-end-line="45" selection-end-column="57" />
+        <state relative-caret-position="230">
+          <caret line="44" column="69" lean-forward="false" selection-start-line="44" selection-start-column="69" selection-end-line="44" selection-end-column="69" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/partials/shoppingContent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="698">
-          <caret line="122" column="51" lean-forward="true" selection-start-line="122" selection-start-column="51" selection-end-line="122" selection-end-column="51" />
+        <state relative-caret-position="261">
+          <caret line="108" column="42" lean-forward="false" selection-start-line="108" selection-start-column="42" selection-end-line="108" selection-end-column="42" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="169" column="36" lean-forward="false" selection-start-line="169" selection-start-column="36" selection-end-line="169" selection-end-column="36" />
+          <folding>
+            <marker date="1516125880182" expanded="true" signature="2624:5178" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/partials/estimatesContent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="63" column="93" lean-forward="false" selection-start-line="63" selection-start-column="93" selection-end-line="63" selection-end-column="93" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="399">
+          <caret line="56" column="65" lean-forward="false" selection-start-line="56" selection-start-column="65" selection-end-line="56" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/bullet-calc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="314" column="0" lean-forward="true" selection-start-line="314" selection-start-column="0" selection-end-line="314" selection-end-column="0" />
+        <state relative-caret-position="1980">
+          <caret line="293" column="62" lean-forward="true" selection-start-line="293" selection-start-column="4" selection-end-line="293" selection-end-column="62" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#536#590#0" expanded="false" />
-            <element signature="e#592#649#0" expanded="false" />
-            <element signature="e#651#704#0" expanded="false" />
-            <element signature="e#2664#2703#0" expanded="false" />
-            <element signature="e#4761#4980#0" expanded="false" />
-            <element signature="e#5368#5871#0" expanded="false" />
-            <element signature="e#6812#7326#0" expanded="false" />
-            <element signature="e#7746#8156#0" expanded="false" />
-            <marker date="1515959436557" expanded="true" signature="4216:4529" ph="..." />
+            <element signature="e#914#1187#0" expanded="false" />
+            <element signature="e#3198#3775#0" expanded="false" />
+            <element signature="e#3849#4347#0" expanded="false" />
+            <element signature="e#4423#4620#0" expanded="false" />
+            <element signature="e#4710#4902#0" expanded="false" />
+            <element signature="e#4973#5396#0" expanded="false" />
+            <element signature="e#5568#5720#0" expanded="false" />
+            <element signature="e#5776#5844#0" expanded="false" />
+            <element signature="e#5914#5985#0" expanded="false" />
+            <element signature="e#6054#6104#0" expanded="false" />
+            <element signature="e#6170#7416#0" expanded="false" />
+            <element signature="e#7783#8193#0" expanded="false" />
+            <element signature="e#9008#9661#0" expanded="false" />
+            <element signature="e#9746#10090#0" expanded="false" />
+            <element signature="e#10186#10366#0" expanded="false" />
+            <element signature="e#10476#10695#0" expanded="false" />
+            <element signature="e#10881#12419#0" expanded="false" />
+            <element signature="e#11083#11586#0" expanded="false" />
+            <element signature="e#12526#13040#0" expanded="false" />
+            <marker date="1516129636277" expanded="true" signature="6906:7219" ph="..." />
           </folding>
         </state>
       </provider>

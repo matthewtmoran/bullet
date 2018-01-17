@@ -54,7 +54,7 @@
 						<li class="list-group-item">
 							<div class="row">
 								<div class="col-8">
-									Total Amount Of Kits
+									Total Amount Of Kits selected
 								</div>
 								<div class="col-4">
 									<input readonly type="number" class="form-control-plaintext" id="kits-input-total"/>
@@ -74,7 +74,7 @@
 					</ul>
 				</div>
 
-				<div class="card">
+				<div class="card" id="estimates-cable">
 					<img class="card-img-top" src="http://via.placeholder.com/350x250"
 					     alt="Slideshow goes here">
 					<div class="card-img-overlay">
@@ -91,7 +91,7 @@
 										Small Spool
 									</div>
 									<div class="col-4">
-										<input class="form-control user-input" type="number">
+										<input class="form-control user-input" id="small" type="number">
 									</div>
 								</div>
 							</li>
@@ -102,7 +102,7 @@
 										Medium Spool
 									</div>
 									<div class="col-4">
-										<input class="form-control user-input" type="number">
+										<input class="form-control user-input" id="medium" type="number">
 									</div>
 								</div>
 							</li>
@@ -113,7 +113,7 @@
 										Large Spool
 									</div>
 									<div class="col-4">
-										<input class="form-control user-input" type="number">
+										<input class="form-control user-input" id="large" type="number">
 									</div>
 								</div>
 							</li>
@@ -138,11 +138,17 @@
 						<li class="list-group-item">
 							<div class="row">
 								<div class="col-8">
-									Total Amount of Feet
+									Total Amount of Feet Selected
 								</div>
 								<div class="col-4">
-									<input readonly type="number" class="form-control-plaintext" id="kits-input-total"/>
+									<input readonly type="number" class="form-control-plaintext" id="feet-input-total"/>
 								</div>
+							</div>
+							<div class="invalid-feedback warn">
+								You have not selected enough spools to cover the linear feet! You need to select XXXX more feet!
+							</div>
+							<div class="invalid-feedback danger">
+								You have an amount of spool that is significantly higher than the recommended amount!
 							</div>
 						</li>
 					</ul>

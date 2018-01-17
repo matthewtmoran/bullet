@@ -10,52 +10,73 @@
 //Cable Bullet Kit
 //  2 terminal ends
 //  1 kit for every run
-
 const state = {
-  runs: 0,
-  height: 30,
-  sections: 1,
-  feet: 50,
-  kits: {
-    total: 0
-  }
+  feetInput: 50,
+  sectionInput: 1,
+  heightInput: 20,
+
+  feetCalc: 0, //based on feet time runs
+  runsCalc: 0, //based on rounded height / 3
+  kitsCalc: 0, //based on height times sections
+
+  
+  woodKitInput: 0,
+  metalKitInput: 0,
+  vinylKitInput: 0,
+  estimateKitsTotal: 0,
+  
+  smallSpoolInput: 0,
+  mediumSpoolInput: 0,
+  largeSpoolInput: 0,
+  
+  totalKitsCalc: 0,  //based on the sum of kits selection input
+  totalSpoolCalc: 0, //the sum of feet based on the total spools input
+  totalExtraCalc: 0,
 };
-
-
-state.totalFeet = state.height * state.feet;
 
 
 $(document).ready(() => {
 
-  const spoolIncrements = [{
-    feet: 500,
-    name: 'Large',
-    price: 250
-  }, {
-    feet: 250,
-    name: 'Medium',
-    price: 137.5
-  }, {
-    feet: 100,
-    name: 'Small',
-    price: 60
-  }];
+  const spoolIncrements = [
+    {
+      feet: 500,
+      price: 250,
+      name: 'Large',
+      type: 'large'
+    },
+    {
+      feet: 250,
+      price: 137.5,
+      name: 'Medium',
+      type: 'medium'
+    },
+    {
+      feet: 100,
+      price: 60,
+      name: 'Small',
+      type:'small'
+    }
+  ];
+
+  //tab navigation
+  const tabs = $('a[data-toggle="tab"]');
+
   //inputs
-  const dimensionFormInputs = $('#parameters :input');
-  const sectionsEl = $('#sections');
-  const feetInput = $('#feet');
-  const heightEl = $('#height');
+  const parametersInput = $('#parameters :input'); //all the inputs in parameters tab 
+  const feetInputEl = $('#feet'); //linear railing feet input
+  const sectionInputEl = $('#sections');  //section input
+  const heightInputEl = $('#height'); //height of railing input
 
   //calculations
-  const feetCalc = $('#feet-calc');
-  const kitsCalc = $('#kits-calc');
-  const runsCalc = $('#runs-calc');
-  const spools = $('#spools');
+  const feetCalcDisplay = $('#feet-calc');  //element to display feet data
+  const kitsCalcDisplay = $('#kits-calc'); //element display kits data
+  // const runsCalcDisplay = $('#runs-calc'); // element to display runs data
+
+  const spoolsDisplay = $('#spools');
 
   //max feet per section
   const maxVertInches = 3;
 
-  const kitQuan = $('#kit-quantity');
   const priceTable = $('#price-table');
   const totalRow = $('#total-row');
   const kitCost = $('#kit-cost');
@@ -66,32 +87,61 @@ $(document).ready(() => {
   const nextButton = $('#next-button');
 
   const kitsInputTotal = $('#kits-input-total');
-  const kitsInput = $('#estimates-kits :input.user-input');
+  const feetInputTotal = $('#feet-input-total');
 
-  //runs of cable per section
-  let runs = 9;
-  let verticle = 30;
-  let sections = 1;
+  //estimate kits input columns
+  const kitsInput = $('#estimates-kits :input.user-input');
+  //estimate cable/feet/spool input columns
+  const cableInput = $('#estimates-cable :input.user-input');
+
+  //estimate kits column inputs validation elements
+  const estimateKitsWarn = $('#estimates-kits .warn');
+  const estimateKitsDanger = $('#estimates-kits .danger');
+  const estimateKitsFeedback = $('#estimates-kits .invalid-feedback');
+
+  //estimate cable/feet/spool column inputs validation elements
+  const estimateCableWarn = $('#estimates-cable .warn');
+  const estimateCableDanger = $('#estimates-cable .danger');
+  const estimateCableFeedback = $('#estimates-cable .invalid-feedback');
+
+
+
+
+  //when input changes for kits input fields
+  kitsInput.on('change', calculateKitsTotal);
+  cableInput.on('change', calculateCableTotal);
+
+
+  //when a tab is shown, this determines what buttons to display
+  tabs.on('shown.bs.tab', toggleActionButtons);
+
+
 
   function init() {
     //TODO: move to css at start
     previousButton.toggle(false);
-    feetInput.val(state.feet);
 
-    railingChange(state.feet);
+    state.runsCalc = calculateRuns();
+    state.feetCalc = calcFeetByRuns();
+    state.kitsCalc = calcKitsBySections();
 
-    heightEl.val(state.height);
 
-    heightChange(state.height);
+    console.log('initialState:' ,state);
 
-    sectionsEl.val(state.sections);
 
-    sectionsChange(state.sections);
+    updateDom(feetInputEl, state.feetInput, 'val');
+    updateDom(heightInputEl, state.heightInput, 'val');
+    updateDom(sectionInputEl, state.sectionInput, 'val');
+
+    // updateDom(runsCalcDisplay, state.runsCalc, 'text');
+    updateDom(kitsCalcDisplay, state.kitsCalc, 'text');
+    updateDom(feetCalcDisplay, state.feetCalc, 'text');
+
   }
   init();
 
   //on input change
-  dimensionFormInputs.on('change', (event) => {
+  parametersInput.on('change', (event) => {
     console.log('Input change triggered');
     //id of input
     const fieldId = event.target.id;
@@ -111,48 +161,72 @@ $(document).ready(() => {
     }
   });
 
+  //when input of railing feet is changed
   function railingChange(val) {
-    console.log('railing / feet input being modified');
-    calcFeetByRuns(val)
+    //update state object
+    state.feetInput = val;
+    state.feetCalc = calcFeetByRuns();
+    //update dom
+    updateDom(feetCalcDisplay, state.feetCalc, 'text');
+    // calcFeetByRuns(val)
   }
   //get number of kits needed based on number of sections
-  function sectionsChange(sections) {
-    calcKitsBySections(sections);
+  function sectionsChange(val) {
+    //updating state
+    state.sectionInput = val;
+    state.kitsCalc = calcKitsBySections();
+    updateDom(kitsCalcDisplay, state.kitsCalc, 'text');
+    // calcKitsBySections(sections);
   }
   //called when height field is modified
   function heightChange(val) {
-    state.runs = Math.ceil((val - 3) / maxVertInches);
+    state.heightInput = val;
+    //updates
+    state.runsCalc = calculateRuns();
+    state.feetCalc = calcFeetByRuns();
+    state.kitsCalc = calcKitsBySections();
 
-    calcFeetByRuns(feetInput.val());
-    calcKitsBySections(sectionsEl.val());
+    state.spoolData = calculateSpools(state.feetCalc);
 
-    return runsCalc.text(state.runs);
+    //update dom elements
+    // updateDom(runsCalcDisplay, state.runsCalc, 'text');
+    updateDom(feetCalcDisplay, state.feetCalc, 'text');
+    updateDom(kitsCalcDisplay, state.kitsCalc, 'text');
+
   }
 
 
+  //generic function to update dom
+  //accpets jquery element, value and the type of higher order function to pass (val/text)
+  function updateDom(element, value, type) {
+    console.log('');
+    console.log('updateDom');
+    console.log(`element is ${element.attr('id')} value = ${value}`);
+    element[type](value);
+  }
+
+  //basic runs calculation
+  function calculateRuns() {
+    return Math.ceil((state.heightInput - 3) / maxVertInches);
+  }
   //calculate kits based on sections
-  function calcKitsBySections(sections) {
+  function calcKitsBySections() {
     // update dom
-    state.kits.quantity = sections * state.runs;
-    kitQuan.text(state.kits.quantity);
-    kitCost.text('$'+21 * (sections * state.runs));
-    calculateGrandTotal();
-    return kitsCalc.text(state.kits.quantity);
+    return state.sectionInput * state.runsCalc;
   }
   //get total feet based on runs * feet
-  function calcFeetByRuns(feet) {
-    state.totalFeet = feet * state.runs;
-    calculateSpools(state.totalFeet);
-    //update dom
-    return feetCalc.text(state.totalFeet);
+  function calcFeetByRuns() {
+    return state.feetInput * state.runsCalc;
   }
 
+  //lots of spool calculations
   function calculateSpools(feet) {
     console.log('calculating spools');
     //find all valid combinations
     let options = findAllCombos(feet, spoolIncrements, 0, []);
     //return the cheapest spool and add some meta data calculations
     let cheapestSpoolCombo = addTotalsFindCheapest(options);
+    state.spoolData = cheapestSpoolCombo;
     //parse the data into an object ot deal with it
 
     //find all spool rows and remove them
@@ -178,6 +252,115 @@ $(document).ready(() => {
     calculateGrandTotal()
   }
 
+
+  //TODO: can this be refractored?
+  previousButton.on('click', () => {
+    $('.nav-tabs a.active').parent().prev('li').find('a').trigger('click');
+  });
+
+  nextButton.on('click', () => {
+    $('.nav-tabs a.active').parent().next('li').find('a').trigger('click');
+  });
+
+
+
+  //toggles when next and previous buttons are displayed
+  function toggleActionButtons(e) {
+    let tagId = e.target.hash;
+    switch(tagId) {
+      case '#parameters':
+        previousButton.toggle(false);
+        nextButton.toggle(true);
+        break;
+      case '#estimates':
+        previousButton.toggle(true);
+        nextButton.toggle(true);
+        break;
+      case '#shopping':
+        previousButton.toggle(true);
+        nextButton.toggle(false);
+        break;
+      default:
+    }
+
+  }
+
+
+  //sets stat of kit totals from user input
+  //updates dom with data
+  //toggles soft validation displays
+  function calculateKitsTotal(event) {
+    state.estimateKitsTotal = getTotalFromInputs(kitsInput);
+    updateDom(kitsInputTotal, state.estimateKitsTotal, 'val');
+
+    if (state.estimateKitsTotal < state.kitsCalc) {
+      estimateKitsFeedback.toggle(false);
+      estimateKitsWarn.toggle(true);
+    }
+    if (state.estimateKitsTotal > state.kitsCalc) {
+      estimateKitsFeedback.toggle(false);
+      estimateKitsDanger.toggle(true);
+    }
+    if (state.estimateKitsTotal === state.kitsCalc) {
+      estimateKitsFeedback.toggle(false);
+    }
+  }
+
+  //sets stat of feet/cable/spool totals from user input
+  //updates dom with data
+  //toggles soft validation displays
+  function calculateCableTotal(event) {
+    state.estimateFeetTotal = getFeetFromInput(cableInput);
+    updateDom(feetInputTotal, state.estimateFeetTotal, 'val');
+
+    if (state.estimateFeetTotal < state.feetCalc) {
+      estimateCableFeedback.toggle(false);
+      estimateCableWarn.toggle(true);
+    }
+    if (state.estimateFeetTotal > state.feetCalc + 150) {
+      estimateCableFeedback.toggle(false);
+      estimateCableDanger.toggle(true);
+    }
+    if (
+      (
+        state.estimateFeetTotal <= state.feetCalc + 150 &&
+        state.estimateFeetTotal >= state.feetCalc
+      ) ||
+      state.estimateFeetTotal === state.feetCalc) {
+      estimateCableFeedback.toggle(false);
+    }
+  }
+
+  //gets totals based on inputs and spool data
+  function getFeetFromInput(inputs) {
+    let feetTotal = 0;
+    inputs.each(function() {
+      let currentField = $(this);
+      let amount = currentField.val();
+      let type = currentField.attr('id');
+      spoolIncrements.forEach((spool) => {
+        if (spool.type === type) {
+          feetTotal += amount * spool.feet;
+        }
+      });
+    });
+    return feetTotal;
+  }
+
+  //gets the total from the array of inputs you give it
+  function getTotalFromInputs(inputs) {
+    let total = 0;
+    inputs.each(function (index, data) {
+      if (!!parseInt($(this).val())) {
+        total += parseInt($(this).val());
+      }
+    });
+    return total;
+  }
+
+  //Valuable function that may not be needed.
+
+  //TODO: consider deletion
   function calculateGrandTotal() {
     let total = 0;
     $('.row-cost').each(function(e, v) {
@@ -244,7 +427,6 @@ $(document).ready(() => {
 
     return cheapestCombo;
   }
-
   //finds all combinations of spools that cover footage
   function findAllCombos(feet, amounts, i, combo) {
     if (feet <= 0 || i === amounts.length)
@@ -272,73 +454,6 @@ $(document).ready(() => {
 
     return combos;
   }
-
-
-  const tabs = $('a[data-toggle="tab"]');
-  tabs.on('shown.bs.tab', toggleActionButtons);
-  previousButton.on('click', () => {
-    $('.nav-tabs a.active').parent().prev('li').find('a').trigger('click');
-  });
-
-  nextButton.on('click', () => {
-    $('.nav-tabs a.active').parent().next('li').find('a').trigger('click');
-  });
-
-  //toggles when next and previous buttons are displayed
-  function toggleActionButtons(e) {
-    let tagId = e.target.hash;
-    switch(tagId) {
-      case '#parameters':
-        previousButton.toggle(false);
-        nextButton.toggle(true);
-        break;
-      case '#estimates':
-        previousButton.toggle(true);
-        nextButton.toggle(true);
-        break;
-      case '#shopping':
-        previousButton.toggle(true);
-        nextButton.toggle(false);
-        break;
-      default:
-    }
-
-  }
-
-
-
-  const estmiateKitsWarn = $('#estimates-kits .warn');
-  const estmiateKitsDanger = $('#estimates-kits .danger');
-  const estimateKitsFeedback = $('#estimates-kits .invalid-feedback');
-
-  kitsInput.on('change', calculateKitsTotal);
-
-  function calculateKitsTotal(event) {
-    state.kits.total = getTotalFromInputs(kitsInput);
-    kitsInputTotal.val(state.kits.total);
-    if (state.kits.total < state.kits.quantity) {
-      estimateKitsFeedback.toggle(false);
-      estmiateKitsWarn.toggle(true);
-    }
-    if (state.kits.total > state.kits.quantity) {
-      estimateKitsFeedback.toggle(false);
-      estmiateKitsDanger.toggle(true);
-    }
-    if (state.kits.total === state.kits.quantity) {
-      estimateKitsFeedback.toggle(false);
-    }
-  }
-
-  function getTotalFromInputs(inputs) {
-    let total = 0;
-    inputs.each(function (index, data) {
-      if (!!parseInt($(this).val())) {
-        total += parseInt($(this).val());
-      }
-    });
-    return total;
-  }
-
 
 
 });
