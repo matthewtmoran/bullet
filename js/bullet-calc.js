@@ -115,19 +115,25 @@ $(document).ready(() => {
   //when a tab is shown, this determines what buttons to display
   tabs.on('shown.bs.tab', toggleActionButtons);
 
+  const woodPostInput = $('#wood-post-kits');
+  const metalPostInput = $('#metal-post-kits');
+  const vinylPostInput = $('#vinyl-post-kits');
 
+  const smallSpoolInput = $('#small');
+  const mediumSpoolInput = $('#medium');
+  const largeSpoolInput = $('#large');
 
   function init() {
     //TODO: move to css at start
     previousButton.toggle(false);
 
+    //updat state object with initial values
     state.runsCalc = calculateRuns();
     state.feetCalc = calcFeetByRuns();
     state.kitsCalc = calcKitsBySections();
 
 
     console.log('initialState:' ,state);
-
 
     updateDom(feetInputEl, state.feetInput, 'val');
     updateDom(heightInputEl, state.heightInput, 'val');
@@ -136,6 +142,20 @@ $(document).ready(() => {
     // updateDom(runsCalcDisplay, state.runsCalc, 'text');
     updateDom(kitsCalcDisplay, state.kitsCalc, 'text');
     updateDom(feetCalcDisplay, state.feetCalc, 'text');
+
+
+    //set default values for estimate post inputs
+    updateDom(woodPostInput, state.woodKitInput, 'val');
+    updateDom(metalPostInput, state.metalKitInput, 'val');
+    updateDom(vinylPostInput, state.vinylKitInput, 'val');
+    updateDom(kitsInputTotal, state.totalKitsCalc, 'val');
+
+    //set default values for estimate spool/cable/feet inputs
+    updateDom(smallSpoolInput, state.smallSpoolInput, 'val');
+    updateDom(mediumSpoolInput, state.mediumSpoolInput, 'val');
+    updateDom(largeSpoolInput, state.largeSpoolInput, 'val');
+    updateDom(feetInputTotal, state.totalExtraCalc, 'val');
+
 
   }
   init();
@@ -253,7 +273,7 @@ $(document).ready(() => {
   }
 
 
-  //TODO: can this be refractored?
+  //TODO: can this selector be refractored?
   previousButton.on('click', () => {
     $('.nav-tabs a.active').parent().prev('li').find('a').trigger('click');
   });

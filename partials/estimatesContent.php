@@ -150,6 +150,8 @@
 							<div class="invalid-feedback danger">
 								You have an amount of spool that is significantly higher than the recommended amount!
 							</div>
+							<small class="form-text text-muted">You should select an amount that at least equals the total of feet needed. (You might want to make sure you have a little extra...
+							</small>
 						</li>
 					</ul>
 				</div>
