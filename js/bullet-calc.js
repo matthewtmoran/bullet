@@ -28,10 +28,23 @@ const state = {
   smallSpoolInput: 0,
   mediumSpoolInput: 0,
   largeSpoolInput: 0,
-  
+
+  installKitInput: 1,
+  cableCutterInput: 0,
+  socketHeadInput: 0,
+  allenWrenchInput: 0,
+  crimpSleeveInput: 0,
+  lobedWasherInput: 0,
+  setScrewInput: 0,
+  bulletWoodInput: 0,
+  bulletMetalInput: 0,
+  crimpingToolInput: 0,
+
   totalKitsCalc: 0,  //based on the sum of kits selection input
   totalSpoolCalc: 0, //the sum of feet based on the total spools input
-  totalExtraCalc: 0,
+  totalExtraCalc: 1,
+
+
 };
 
 
@@ -86,13 +99,17 @@ $(document).ready(() => {
   const previousButton = $('#previous-button');
   const nextButton = $('#next-button');
 
+  //totals for estimates sections
   const kitsInputTotal = $('#kits-input-total');
   const feetInputTotal = $('#feet-input-total');
+  const extrasInputTotal = $('#extras-input-total');
 
   //estimate kits input columns
   const kitsInput = $('#estimates-kits :input.user-input');
   //estimate cable/feet/spool input columns
   const cableInput = $('#estimates-cable :input.user-input');
+  //estimate extras input fields
+  const extrasInput = $('#estimates-extras :input.user-input');
 
   //estimate kits column inputs validation elements
   const estimateKitsWarn = $('#estimates-kits .warn');
@@ -110,27 +127,43 @@ $(document).ready(() => {
   //when input changes for kits input fields
   kitsInput.on('change', calculateKitsTotal);
   cableInput.on('change', calculateCableTotal);
+  extrasInput.on('change', calculateExtrasTotal);
 
 
   //when a tab is shown, this determines what buttons to display
   tabs.on('shown.bs.tab', toggleActionButtons);
 
+  //estimates, first column
   const woodPostInput = $('#wood-post-kits');
   const metalPostInput = $('#metal-post-kits');
   const vinylPostInput = $('#vinyl-post-kits');
 
+  //estimates / second column
   const smallSpoolInput = $('#small');
   const mediumSpoolInput = $('#medium');
   const largeSpoolInput = $('#large');
+
+  //estimates / third column
+  const installKitInput = $('#install-kit-input');
+  const cableCutterInput = $('#cable-cutter-input');
+  const socketHeadInput = $('#socket-head-input');
+  const allenWrenchInput = $('#allen-wrench-input');
+  const crimpSleeveInput = $('#crimp-sleeve-input');
+  const lobedWasherInput = $('#lobed-washer-input');
+  const setScrewInput = $('#set-screw-input');
+  const bulletWoodInput = $('#bullet-wood-input');
+  const bulletMetalInput = $('#bullet-metal-input');
+  const crimpingToolInput = $('#crimping-tool-input');
 
   function init() {
     //TODO: move to css at start
     previousButton.toggle(false);
 
-    //updat state object with initial values
+    //update state object with initial values
     state.runsCalc = calculateRuns();
     state.feetCalc = calcFeetByRuns();
     state.kitsCalc = calcKitsBySections();
+    // state.extrasCalc = calcKitsBySections();
 
 
     console.log('initialState:' ,state);
@@ -155,6 +188,18 @@ $(document).ready(() => {
     updateDom(mediumSpoolInput, state.mediumSpoolInput, 'val');
     updateDom(largeSpoolInput, state.largeSpoolInput, 'val');
     updateDom(feetInputTotal, state.totalExtraCalc, 'val');
+
+    updateDom(installKitInput, state.installKitInput, 'val');
+    updateDom(cableCutterInput, state.cableCutterInput, 'val');
+    updateDom(socketHeadInput, state.socketHeadInput, 'val');
+    updateDom(allenWrenchInput, state.allenWrenchInput, 'val');
+    updateDom(crimpSleeveInput, state.crimpSleeveInput, 'val');
+    updateDom(lobedWasherInput, state.lobedWasherInput, 'val');
+    updateDom(setScrewInput, state.setScrewInput, 'val');
+    updateDom(bulletWoodInput, state.bulletWoodInput, 'val');
+    updateDom(bulletMetalInput, state.bulletMetalInput, 'val');
+    updateDom(crimpingToolInput, state.crimpingToolInput, 'val');
+    updateDom(extrasInputTotal, state.totalExtraCalc, 'val');
 
 
   }
@@ -351,6 +396,11 @@ $(document).ready(() => {
     }
   }
 
+  function calculateExtrasTotal(event) {
+    state.totalExtraCalc = getTotalFromInputs(extrasInput);
+    updateDom(extrasInputTotal, state.totalExtraCalc, 'val');
+  }
+
   //gets totals based on inputs and spool data
   function getFeetFromInput(inputs) {
     let feetTotal = 0;
@@ -392,7 +442,7 @@ $(document).ready(() => {
     grandTotal.text(`≈ $${total}`);
   }
 
-  //creats an easy to work with object for each combination and returns the cheapest option
+  //creates an easy to work with object for each combination and returns the cheapest option
   //allCombinations is an array of arrays
   function addTotalsFindCheapest(allCombinations) {
     //[{feet: 100, name: "Small", price: 60}]

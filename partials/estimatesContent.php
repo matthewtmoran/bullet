@@ -18,7 +18,7 @@
 							<li class="list-group-item">
 								<div class="row">
 									<div class="col-8">
-										Wood Posts
+										Kit for Wood Posts
 									</div>
 									<div class="col-4">
 										<input id="wood-post-kits" min="0" class="form-control user-input"
@@ -29,7 +29,7 @@
 							<li class="list-group-item">
 								<div class="row">
 									<div class="col-8">
-										Metal Posts
+										Kit for Metal Posts
 									</div>
 									<div class="col-4">
 										<input id="metal-post-kits" min="0" class="form-control user-input"
@@ -40,7 +40,7 @@
 							<li class="list-group-item">
 								<div class="row">
 									<div class="col-8">
-										Vinyl or Composite Sleeve Posts
+										Kit for Vinyl or Composite Sleeve Posts
 									</div>
 									<div class="col-4">
 										<input id="vinyl-post-kits" min="0" class="form-control user-input"
@@ -156,7 +156,7 @@
 					</ul>
 				</div>
 
-				<div class="card">
+				<div class="card" id="estimates-extras">
 					<img class="card-img-top" src="http://via.placeholder.com/350x250"
 					     alt="Slideshow goes here">
 					<div class="card-img-overlay">
@@ -173,7 +173,7 @@
 										Cable Bullet Installation Kit
 									</div>
 									<div class="col-4">
-										<input class="form-control user-input" type="number">
+										<input id="install-kit-input" class="form-control user-input" type="number">
 									</div>
 								</div>
 							</li>
@@ -183,7 +183,7 @@
 										HIT® 22-WRC75-3 1/4-Inch Wire Rope Cable Cutter
 									</div>
 									<div class="col-4">
-
+										<input id="cable-cutter-input" class="form-control user-input" type="number">
 									</div>
 								</div>
 							</li>
@@ -193,7 +193,7 @@
 										6" Hex Socket Head Power Bit (3/32")
 									</div>
 									<div class="col-4">
-										<input class="form-control user-input" type="number">
+										<input id="socket-head-input" class="form-control user-input" type="number">
 									</div>
 								</div>
 							</li>
@@ -203,7 +203,7 @@
 										Allen Wrench (3/32")
 									</div>
 									<div class="col-4">
-										<input class="form-control user-input" type="number">
+										<input id="allen-wrench-input" class="form-control user-input" type="number">
 									</div>
 								</div>
 							</li>
@@ -213,7 +213,7 @@
 										Crimp Sleeve
 									</div>
 									<div class="col-4">
-										<input class="form-control user-input" type="number">
+										<input id="crimp-sleeve-input" class="form-control user-input" type="number">
 									</div>
 								</div>
 							</li>
@@ -223,7 +223,7 @@
 										Lobed Washer
 									</div>
 									<div class="col-4">
-										<input class="form-control user-input" type="number">
+										<input id="lobed-washer-input" class="form-control user-input" type="number">
 									</div>
 								</div>
 							</li>
@@ -233,7 +233,7 @@
 										Set Screw
 									</div>
 									<div class="col-4">
-										<input class="form-control user-input" type="number">
+										<input id="set-screw-input" class="form-control user-input" type="number">
 									</div>
 								</div>
 							</li>
@@ -243,7 +243,7 @@
 										Cable Bullet for Wood Posts
 									</div>
 									<div class="col-4">
-										<input class="form-control user-input" type="number">
+										<input id="bullet-wood-input" class="form-control user-input" type="number">
 									</div>
 								</div>
 							</li>
@@ -253,7 +253,7 @@
 										Cable Bullet for Metal Posts
 									</div>
 									<div class="col-4">
-										<input class="form-control user-input" type="number">
+										<input id="bullet-metal-input" class="form-control user-input" type="number">
 									</div>
 								</div>
 							</li>
@@ -263,7 +263,7 @@
 										Die Set for Crimping Tool
 									</div>
 									<div class="col-4">
-										<input class="form-control user-input" type="number">
+										<input id="crimping-tool-input" class="form-control user-input" type="number">
 									</div>
 								</div>
 							</li>
@@ -277,7 +277,7 @@
 									Total Amount of Extras
 								</div>
 								<div class="col-4">
-									<input readonly type="number" class="form-control-plaintext">
+									<input id="extras-input-total" readonly type="number" class="form-control-plaintext">
 								</div>
 							</div>
 						</li>
